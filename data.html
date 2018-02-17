@@ -1,0 +1,6812 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather Dashboard for Visualization</title>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><strong>Latitude</strong></a>
+        </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="temperature.html">Temperature</a></li>
+                    <li><a href="humidity.html">Humidity</a></li>
+                    <li><a href="cloudiness.html">Cloudiness</a></li>
+                    <li><a href="windspeed.html">Wind Speed</a></li>                  
+                  </ul>
+                </li>
+                <li><a href="/comparison.html">Comparison</a></li>
+                
+              </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<div class="container-fluid main">
+
+  	<h3>Weather Data of Cities Around the World</h3>
+  	<h5>This table contains the weather data used in the analysis. The city data was obtained using citypy python library. The weather data was gathered from OpenWeatherMap API using the latitude and longitude values.</h5>
+  	<br>
+ <strong>
+
+
+<table class="table table-bordered table-hover table-condensed table-striped">
+<tbody><tr>
+<!-- <td>0</td> -->
+<td>City</td>
+<td>Country</td>
+<td>Latitude</td>
+<td>Temperature</td>
+<td>Humidity</td>
+<td>Cloud Cover</td>
+<td>Wind Speed</td>
+<td>Date</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B044CC0&gt;</td>
+<td>vaini</td>
+<td>to</td>
+<td>15.34</td>
+<td>72.58</td>
+<td>53</td>
+<td>0</td>
+<td>5.35</td>
+<td>1518832750</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B132FD0&gt;</td>
+<td>kodiak</td>
+<td>us</td>
+<td>39.95</td>
+<td>26.6</td>
+<td>58</td>
+<td>1</td>
+<td>3.36</td>
+<td>1518828780</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A833080&gt;</td>
+<td>marcona</td>
+<td>pe</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D785F8&gt;</td>
+<td>marsa matruh</td>
+<td>eg</td>
+<td>31.35</td>
+<td>50</td>
+<td>87</td>
+<td>40</td>
+<td>8.05</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498D8A58&gt;</td>
+<td>cidreira</td>
+<td>br</td>
+<td>-30.17</td>
+<td>69.75</td>
+<td>79</td>
+<td>20</td>
+<td>13.29</td>
+<td>1518832751</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1380F0&gt;</td>
+<td>nome</td>
+<td>us</td>
+<td>30.04</td>
+<td>68.38</td>
+<td>83</td>
+<td>90</td>
+<td>3.36</td>
+<td>1518830100</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F005F8&gt;</td>
+<td>tasiilaq</td>
+<td>gl</td>
+<td>65.61</td>
+<td>26.6</td>
+<td>79</td>
+<td>0</td>
+<td>2.24</td>
+<td>1518828600</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49ACD320&gt;</td>
+<td>jian</td>
+<td>cn</td>
+<td>25.65</td>
+<td>63.58</td>
+<td>81</td>
+<td>0</td>
+<td>4.34</td>
+<td>1518832752</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A849B00&gt;</td>
+<td>mataura</td>
+<td>pf</td>
+<td>-46.19</td>
+<td>65.38</td>
+<td>61</td>
+<td>56</td>
+<td>17.38</td>
+<td>1518832752</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49880470&gt;</td>
+<td>saint george</td>
+<td>bm</td>
+<td>39.45</td>
+<td>37.4</td>
+<td>86</td>
+<td>0</td>
+<td>5.82</td>
+<td>1518828600</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B5394A8&gt;</td>
+<td>springbok</td>
+<td>za</td>
+<td>-29.67</td>
+<td>50.67</td>
+<td>78</td>
+<td>0</td>
+<td>2.77</td>
+<td>1518832753</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A845F98&gt;</td>
+<td>atuona</td>
+<td>pf</td>
+<td>-9.8</td>
+<td>80.59</td>
+<td>100</td>
+<td>64</td>
+<td>15.08</td>
+<td>1518832753</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A53EF0&gt;</td>
+<td>sibiti</td>
+<td>cg</td>
+<td>-3.69</td>
+<td>68.94</td>
+<td>99</td>
+<td>92</td>
+<td>3.29</td>
+<td>1518832753</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497CE390&gt;</td>
+<td>yeppoon</td>
+<td>au</td>
+<td>-23.13</td>
+<td>91.4</td>
+<td>52</td>
+<td>40</td>
+<td>8.05</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE4E780&gt;</td>
+<td>mys shmidta</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A58C898&gt;</td>
+<td>kazalinsk</td>
+<td>kz</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5EC6A0&gt;</td>
+<td>taolanaro</td>
+<td>mg</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A18FD0&gt;</td>
+<td>port hardy</td>
+<td>ca</td>
+<td>50.7</td>
+<td>41</td>
+<td>75</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D0BAC8&gt;</td>
+<td>zwiesel</td>
+<td>de</td>
+<td>49.01</td>
+<td>16.92</td>
+<td>80</td>
+<td>48</td>
+<td>2.28</td>
+<td>1518832755</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A8BDD8&gt;</td>
+<td>castro</td>
+<td>cl</td>
+<td>-42.48</td>
+<td>61.56</td>
+<td>94</td>
+<td>80</td>
+<td>5.75</td>
+<td>1518832756</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0D4588&gt;</td>
+<td>loa janan</td>
+<td>id</td>
+<td>-0.58</td>
+<td>88.24</td>
+<td>67</td>
+<td>24</td>
+<td>2.84</td>
+<td>1518832756</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F00278&gt;</td>
+<td>qaanaaq</td>
+<td>gl</td>
+<td>77.48</td>
+<td>-7.3</td>
+<td>89</td>
+<td>20</td>
+<td>2.1</td>
+<td>1518832756</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A592C50&gt;</td>
+<td>temir</td>
+<td>kz</td>
+<td>49.14</td>
+<td>-1.76</td>
+<td>70</td>
+<td>44</td>
+<td>4.85</td>
+<td>1518832685</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD5C5F8&gt;</td>
+<td>bukachacha</td>
+<td>ru</td>
+<td>52.99</td>
+<td>0.31</td>
+<td>49</td>
+<td>0</td>
+<td>3.4</td>
+<td>1518832757</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFE7AC8&gt;</td>
+<td>eyl</td>
+<td>so</td>
+<td>7.98</td>
+<td>72.27</td>
+<td>100</td>
+<td>92</td>
+<td>14.58</td>
+<td>1518832757</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE9C4A8&gt;</td>
+<td>pevek</td>
+<td>ru</td>
+<td>69.7</td>
+<td>1.17</td>
+<td>91</td>
+<td>64</td>
+<td>3.56</td>
+<td>1518832757</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978EF28&gt;</td>
+<td>ushuaia</td>
+<td>ar</td>
+<td>-54.81</td>
+<td>50</td>
+<td>81</td>
+<td>20</td>
+<td>19.46</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD24D68&gt;</td>
+<td>amderma</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49787D30&gt;</td>
+<td>mar del plata</td>
+<td>ar</td>
+<td>-46.43</td>
+<td>69.43</td>
+<td>54</td>
+<td>0</td>
+<td>5.01</td>
+<td>1518832758</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497BE390&gt;</td>
+<td>hobart</td>
+<td>au</td>
+<td>-42.88</td>
+<td>68</td>
+<td>42</td>
+<td>75</td>
+<td>25.28</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EFDCC0&gt;</td>
+<td>illoqqortoormiut</td>
+<td>gl</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499F9550&gt;</td>
+<td>haines junction</td>
+<td>ca</td>
+<td>60.75</td>
+<td>-2.21</td>
+<td>75</td>
+<td>0</td>
+<td>2.06</td>
+<td>1518832759</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD45C50&gt;</td>
+<td>beringovskiy</td>
+<td>ru</td>
+<td>63.05</td>
+<td>34.2</td>
+<td>94</td>
+<td>88</td>
+<td>18.72</td>
+<td>1518832759</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B5298D0&gt;</td>
+<td>east london</td>
+<td>za</td>
+<td>-33.02</td>
+<td>69.79</td>
+<td>100</td>
+<td>88</td>
+<td>6.08</td>
+<td>1518832760</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF5B748&gt;</td>
+<td>vitim</td>
+<td>ru</td>
+<td>59.44</td>
+<td>0.63</td>
+<td>71</td>
+<td>56</td>
+<td>6.58</td>
+<td>1518832760</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3F07B8&gt;</td>
+<td>obama</td>
+<td>jp</td>
+<td>35.49</td>
+<td>39.24</td>
+<td>80</td>
+<td>88</td>
+<td>17.43</td>
+<td>1518832760</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A34668&gt;</td>
+<td>thompson</td>
+<td>ca</td>
+<td>55.74</td>
+<td>3.2</td>
+<td>59</td>
+<td>75</td>
+<td>9.17</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B132940&gt;</td>
+<td>barrow</td>
+<td>us</td>
+<td>-38.31</td>
+<td>84.28</td>
+<td>38</td>
+<td>64</td>
+<td>15.48</td>
+<td>1518832761</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF44E80&gt;</td>
+<td>ust-omchug</td>
+<td>ru</td>
+<td>61.13</td>
+<td>-10.72</td>
+<td>65</td>
+<td>20</td>
+<td>3.51</td>
+<td>1518832761</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B5F98&gt;</td>
+<td>busselton</td>
+<td>au</td>
+<td>-33.64</td>
+<td>75.64</td>
+<td>85</td>
+<td>8</td>
+<td>10.38</td>
+<td>1518832761</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B157E80&gt;</td>
+<td>fortuna</td>
+<td>us</td>
+<td>38.18</td>
+<td>48.2</td>
+<td>100</td>
+<td>0</td>
+<td>4.7</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A439F28&gt;</td>
+<td>havre</td>
+<td>us</td>
+<td>48.55</td>
+<td>23</td>
+<td>85</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518832380</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7E4668&gt;</td>
+<td>ahipara</td>
+<td>nz</td>
+<td>-35.17</td>
+<td>73.84</td>
+<td>88</td>
+<td>92</td>
+<td>6.76</td>
+<td>1518832762</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A956A0&gt;</td>
+<td>punta arenas</td>
+<td>cl</td>
+<td>-53.16</td>
+<td>50</td>
+<td>53</td>
+<td>0</td>
+<td>3.36</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2F9278&gt;</td>
+<td>grindavik</td>
+<td>is</td>
+<td>63.84</td>
+<td>30.2</td>
+<td>100</td>
+<td>75</td>
+<td>9.17</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499D4588&gt;</td>
+<td>aklavik</td>
+<td>ca</td>
+<td>68.22</td>
+<td>1.4</td>
+<td>77</td>
+<td>40</td>
+<td>10.29</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7FD0F0&gt;</td>
+<td>salalah</td>
+<td>om</td>
+<td>17.01</td>
+<td>71.6</td>
+<td>73</td>
+<td>40</td>
+<td>4.7</td>
+<td>1518828600</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF193C8&gt;</td>
+<td>talnakh</td>
+<td>ru</td>
+<td>69.49</td>
+<td>-2.62</td>
+<td>85</td>
+<td>68</td>
+<td>11.9</td>
+<td>1518832764</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D52358&gt;</td>
+<td>puerto ayora</td>
+<td>ec</td>
+<td>-0.74</td>
+<td>75.24</td>
+<td>100</td>
+<td>56</td>
+<td>7.65</td>
+<td>1518832764</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A763D30&gt;</td>
+<td>nguru</td>
+<td>ng</td>
+<td>12.88</td>
+<td>64.39</td>
+<td>40</td>
+<td>0</td>
+<td>8.66</td>
+<td>1518832764</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B92588&gt;</td>
+<td>sevilla</td>
+<td>co</td>
+<td>37.39</td>
+<td>47.82</td>
+<td>100</td>
+<td>90</td>
+<td>8.05</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B1A20&gt;</td>
+<td>albany</td>
+<td>au</td>
+<td>42.65</td>
+<td>33.84</td>
+<td>58</td>
+<td>90</td>
+<td>18.34</td>
+<td>1518831900</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEFFB70&gt;</td>
+<td>srednekolymsk</td>
+<td>ru</td>
+<td>67.46</td>
+<td>-10.04</td>
+<td>70</td>
+<td>88</td>
+<td>4.63</td>
+<td>1518832765</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D45978&gt;</td>
+<td>wahran</td>
+<td>dz</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A84B470&gt;</td>
+<td>rikitea</td>
+<td>pf</td>
+<td>-23.12</td>
+<td>79.42</td>
+<td>100</td>
+<td>44</td>
+<td>12.91</td>
+<td>1518832766</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497FC438&gt;</td>
+<td>oistins</td>
+<td>bb</td>
+<td>13.07</td>
+<td>75.2</td>
+<td>83</td>
+<td>40</td>
+<td>14.99</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B52C9B0&gt;</td>
+<td>hermanus</td>
+<td>za</td>
+<td>-34.42</td>
+<td>58.09</td>
+<td>95</td>
+<td>24</td>
+<td>5.79</td>
+<td>1518832766</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD6AE80&gt;</td>
+<td>cherskiy</td>
+<td>ru</td>
+<td>68.75</td>
+<td>-7.75</td>
+<td>93</td>
+<td>64</td>
+<td>3.33</td>
+<td>1518832767</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFB29B0&gt;</td>
+<td>jamestown</td>
+<td>sh</td>
+<td>-33.21</td>
+<td>79.24</td>
+<td>71</td>
+<td>8</td>
+<td>4.23</td>
+<td>1518832767</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B07C128&gt;</td>
+<td>tounan</td>
+<td>tw</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5D7E48&gt;</td>
+<td>gat</td>
+<td>ly</td>
+<td>14.69</td>
+<td>72.45</td>
+<td>55</td>
+<td>76</td>
+<td>12.06</td>
+<td>1518832768</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A64FD30&gt;</td>
+<td>cabo san lucas</td>
+<td>mx</td>
+<td>22.89</td>
+<td>78.19</td>
+<td>64</td>
+<td>40</td>
+<td>4.7</td>
+<td>1518828420</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A18C978&gt;</td>
+<td>dhone</td>
+<td>in</td>
+<td>15.4</td>
+<td>75.06</td>
+<td>44</td>
+<td>0</td>
+<td>4.52</td>
+<td>1518832768</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A683E48&gt;</td>
+<td>guerrero negro</td>
+<td>mx</td>
+<td>27.97</td>
+<td>63</td>
+<td>97</td>
+<td>48</td>
+<td>3.4</td>
+<td>1518832768</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0FF470&gt;</td>
+<td>dingle</td>
+<td>ie</td>
+<td>11</td>
+<td>83.47</td>
+<td>77</td>
+<td>0</td>
+<td>10.11</td>
+<td>1518832768</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499C3F60&gt;</td>
+<td>francistown</td>
+<td>bw</td>
+<td>-21.17</td>
+<td>63.76</td>
+<td>100</td>
+<td>76</td>
+<td>3.56</td>
+<td>1518832769</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B165908&gt;</td>
+<td>lompoc</td>
+<td>us</td>
+<td>34.64</td>
+<td>60.87</td>
+<td>44</td>
+<td>1</td>
+<td>10.29</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B535DD8&gt;</td>
+<td>saldanha</td>
+<td>za</td>
+<td>41.42</td>
+<td>44.14</td>
+<td>98</td>
+<td>92</td>
+<td>3.11</td>
+<td>1518832769</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B5028D0&gt;</td>
+<td>el limon</td>
+<td>ve</td>
+<td>10.3</td>
+<td>75.2</td>
+<td>78</td>
+<td>20</td>
+<td>2.62</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D56128&gt;</td>
+<td>santa lucia</td>
+<td>ec</td>
+<td>39.93</td>
+<td>51.8</td>
+<td>87</td>
+<td>75</td>
+<td>5.82</td>
+<td>1518828900</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF547F0&gt;</td>
+<td>verkhnyaya inta</td>
+<td>ru</td>
+<td>65.99</td>
+<td>15.39</td>
+<td>70</td>
+<td>88</td>
+<td>7.76</td>
+<td>1518832771</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5DA358&gt;</td>
+<td>misratah</td>
+<td>ly</td>
+<td>32.38</td>
+<td>49.54</td>
+<td>100</td>
+<td>48</td>
+<td>0.6</td>
+<td>1518832771</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A413C8&gt;</td>
+<td>yellowknife</td>
+<td>ca</td>
+<td>62.45</td>
+<td>1.4</td>
+<td>77</td>
+<td>90</td>
+<td>11.41</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7CB588&gt;</td>
+<td>raudeberg</td>
+<td>no</td>
+<td>61.99</td>
+<td>37.4</td>
+<td>86</td>
+<td>88</td>
+<td>10.29</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE5B978&gt;</td>
+<td>nikolskoye</td>
+<td>ru</td>
+<td>59.7</td>
+<td>21.2</td>
+<td>92</td>
+<td>75</td>
+<td>4.47</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F00668&gt;</td>
+<td>upernavik</td>
+<td>gl</td>
+<td>72.79</td>
+<td>-4.87</td>
+<td>100</td>
+<td>44</td>
+<td>2.51</td>
+<td>1518832772</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A580C88&gt;</td>
+<td>tabiauea</td>
+<td>ki</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B07320&gt;</td>
+<td>yangjiang</td>
+<td>cn</td>
+<td>21.85</td>
+<td>65.97</td>
+<td>88</td>
+<td>8</td>
+<td>6.24</td>
+<td>1518832773</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B526CC0&gt;</td>
+<td>cape town</td>
+<td>za</td>
+<td>-33.93</td>
+<td>64.4</td>
+<td>77</td>
+<td>0</td>
+<td>11.41</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AAFFD0&gt;</td>
+<td>chenzhou</td>
+<td>cn</td>
+<td>25.81</td>
+<td>59.31</td>
+<td>80</td>
+<td>8</td>
+<td>3.89</td>
+<td>1518832773</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A83EB00&gt;</td>
+<td>sechura</td>
+<td>pe</td>
+<td>-5.56</td>
+<td>75.82</td>
+<td>79</td>
+<td>36</td>
+<td>10.27</td>
+<td>1518832774</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B53F390&gt;</td>
+<td>willowmore</td>
+<td>za</td>
+<td>-33.3</td>
+<td>57.19</td>
+<td>96</td>
+<td>80</td>
+<td>2.28</td>
+<td>1518832774</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1D4898&gt;</td>
+<td>kahului</td>
+<td>us</td>
+<td>20.89</td>
+<td>76.24</td>
+<td>74</td>
+<td>75</td>
+<td>9.17</td>
+<td>1518828960</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A74BFD0&gt;</td>
+<td>poum</td>
+<td>nc</td>
+<td>41.28</td>
+<td>15.21</td>
+<td>73</td>
+<td>0</td>
+<td>2.1</td>
+<td>1518832774</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499D86A0&gt;</td>
+<td>attawapiskat</td>
+<td>ca</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A629C88&gt;</td>
+<td>hithadhoo</td>
+<td>mv</td>
+<td>-0.6</td>
+<td>80.46</td>
+<td>100</td>
+<td>80</td>
+<td>3.89</td>
+<td>1518832775</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A34D68&gt;</td>
+<td>torbay</td>
+<td>ca</td>
+<td>47.66</td>
+<td>33.8</td>
+<td>93</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AA11D0&gt;</td>
+<td>lagdo</td>
+<td>cm</td>
+<td>9.06</td>
+<td>72.67</td>
+<td>61</td>
+<td>0</td>
+<td>5.53</td>
+<td>1518832775</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A2D3C8&gt;</td>
+<td>sioux lookout</td>
+<td>ca</td>
+<td>50.1</td>
+<td>10.78</td>
+<td>65</td>
+<td>90</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1D4B38&gt;</td>
+<td>kapaa</td>
+<td>us</td>
+<td>22.08</td>
+<td>76.82</td>
+<td>61</td>
+<td>75</td>
+<td>11.41</td>
+<td>1518828960</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499F17F0&gt;</td>
+<td>flin flon</td>
+<td>ca</td>
+<td>54.77</td>
+<td>4.81</td>
+<td>66</td>
+<td>32</td>
+<td>9.37</td>
+<td>1518832776</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB3A048&gt;</td>
+<td>kloulklubed</td>
+<td>pw</td>
+<td>7.04</td>
+<td>84.85</td>
+<td>74</td>
+<td>90</td>
+<td>12.75</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EFD828&gt;</td>
+<td>wa</td>
+<td>gh</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A580940&gt;</td>
+<td>butaritari</td>
+<td>ki</td>
+<td>3.07</td>
+<td>80.86</td>
+<td>100</td>
+<td>88</td>
+<td>11.95</td>
+<td>1518832777</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB557B8&gt;</td>
+<td>saint-pierre</td>
+<td>re</td>
+<td>48.95</td>
+<td>38.39</td>
+<td>95</td>
+<td>0</td>
+<td>11.41</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4992E240&gt;</td>
+<td>maceio</td>
+<td>br</td>
+<td>-9.67</td>
+<td>77</td>
+<td>88</td>
+<td>75</td>
+<td>4.7</td>
+<td>1518832800</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A749AC8&gt;</td>
+<td>rehoboth</td>
+<td>na</td>
+<td>-23.31</td>
+<td>50.08</td>
+<td>58</td>
+<td>0</td>
+<td>3.85</td>
+<td>1518832778</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD3B358&gt;</td>
+<td>batagay-alyta</td>
+<td>ru</td>
+<td>67.8</td>
+<td>-15.13</td>
+<td>83</td>
+<td>32</td>
+<td>4.23</td>
+<td>1518832779</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A1DBCF8&gt;</td>
+<td>kankon</td>
+<td>in</td>
+<td>15.02</td>
+<td>82.48</td>
+<td>95</td>
+<td>0</td>
+<td>10.38</td>
+<td>1518832779</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4BB4A8&gt;</td>
+<td>coos bay</td>
+<td>us</td>
+<td>43.37</td>
+<td>47.16</td>
+<td>81</td>
+<td>90</td>
+<td>8.05</td>
+<td>1518830100</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B132A20&gt;</td>
+<td>bethel</td>
+<td>us</td>
+<td>60.79</td>
+<td>28.4</td>
+<td>92</td>
+<td>40</td>
+<td>8.05</td>
+<td>1518828780</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9DC50&gt;</td>
+<td>kutum</td>
+<td>sd</td>
+<td>14.2</td>
+<td>60.66</td>
+<td>55</td>
+<td>0</td>
+<td>9.6</td>
+<td>1518832780</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4ADE1390&gt;</td>
+<td>kodinsk</td>
+<td>ru</td>
+<td>58.6</td>
+<td>0.54</td>
+<td>73</td>
+<td>64</td>
+<td>5.57</td>
+<td>1518832781</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1D4710&gt;</td>
+<td>hilo</td>
+<td>us</td>
+<td>19.71</td>
+<td>69.26</td>
+<td>88</td>
+<td>90</td>
+<td>3.36</td>
+<td>1518831720</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4ADCE358&gt;</td>
+<td>khatanga</td>
+<td>ru</td>
+<td>71.98</td>
+<td>-15.26</td>
+<td>46</td>
+<td>36</td>
+<td>2.89</td>
+<td>1518832781</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2F9470&gt;</td>
+<td>hofn</td>
+<td>is</td>
+<td>64.25</td>
+<td>37.12</td>
+<td>100</td>
+<td>88</td>
+<td>4.41</td>
+<td>1518832781</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AED6390&gt;</td>
+<td>sentyabrskiy</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B02BE48&gt;</td>
+<td>that phanom</td>
+<td>th</td>
+<td>16.94</td>
+<td>71.64</td>
+<td>88</td>
+<td>40</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A58F128&gt;</td>
+<td>makat</td>
+<td>kz</td>
+<td>47.65</td>
+<td>3.87</td>
+<td>75</td>
+<td>12</td>
+<td>9.89</td>
+<td>1518832782</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4998FB70&gt;</td>
+<td>sao joao da barra</td>
+<td>br</td>
+<td>-21.64</td>
+<td>76.5</td>
+<td>100</td>
+<td>24</td>
+<td>6.42</td>
+<td>1518832782</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD42C18&gt;</td>
+<td>belushya guba</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D820F0&gt;</td>
+<td>arrecife</td>
+<td>es</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B8400&gt;</td>
+<td>carnarvon</td>
+<td>au</td>
+<td>-30.97</td>
+<td>49.81</td>
+<td>86</td>
+<td>0</td>
+<td>3.4</td>
+<td>1518832783</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49784D30&gt;</td>
+<td>comodoro rivadavia</td>
+<td>ar</td>
+<td>-45.87</td>
+<td>80.6</td>
+<td>51</td>
+<td>0</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EFDF60&gt;</td>
+<td>nanortalik</td>
+<td>gl</td>
+<td>60.14</td>
+<td>22.05</td>
+<td>100</td>
+<td>68</td>
+<td>25.7</td>
+<td>1518832784</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A8B0F0&gt;</td>
+<td>avarua</td>
+<td>ck</td>
+<td>-21.21</td>
+<td>87.8</td>
+<td>70</td>
+<td>40</td>
+<td>10.29</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499177B8&gt;</td>
+<td>itupiranga</td>
+<td>br</td>
+<td>-5.13</td>
+<td>77</td>
+<td>100</td>
+<td>0</td>
+<td>3</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5FF710&gt;</td>
+<td>dire</td>
+<td>ml</td>
+<td>9.18</td>
+<td>57.2</td>
+<td>58</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B019F28&gt;</td>
+<td>mae hong son</td>
+<td>th</td>
+<td>19.3</td>
+<td>57.2</td>
+<td>87</td>
+<td>20</td>
+<td>2.21</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1381D0&gt;</td>
+<td>palmer</td>
+<td>us</td>
+<td>-34.85</td>
+<td>71.6</td>
+<td>60</td>
+<td>75</td>
+<td>10.29</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFB2908&gt;</td>
+<td>georgetown</td>
+<td>sh</td>
+<td>6.8</td>
+<td>73.4</td>
+<td>100</td>
+<td>90</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A922B0&gt;</td>
+<td>lebu</td>
+<td>cl</td>
+<td>8.96</td>
+<td>57.2</td>
+<td>58</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497BBBA8&gt;</td>
+<td>geraldton</td>
+<td>au</td>
+<td>49.72</td>
+<td>3.2</td>
+<td>59</td>
+<td>75</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A287780&gt;</td>
+<td>salumbar</td>
+<td>in</td>
+<td>24.14</td>
+<td>64.03</td>
+<td>54</td>
+<td>0</td>
+<td>2.62</td>
+<td>1518832786</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB55748&gt;</td>
+<td>saint-philippe</td>
+<td>re</td>
+<td>45.36</td>
+<td>21.61</td>
+<td>53</td>
+<td>1</td>
+<td>13.87</td>
+<td>1518830100</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49744FD0&gt;</td>
+<td>qarchi gak</td>
+<td>af</td>
+<td>37.04</td>
+<td>42.1</td>
+<td>93</td>
+<td>75</td>
+<td>3.33</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3BDB38&gt;</td>
+<td>hirado</td>
+<td>jp</td>
+<td>33.32</td>
+<td>46.4</td>
+<td>61</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EFDDA0&gt;</td>
+<td>ilulissat</td>
+<td>gl</td>
+<td>69.22</td>
+<td>1.4</td>
+<td>70</td>
+<td>76</td>
+<td>6.93</td>
+<td>1518828600</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE600F0&gt;</td>
+<td>nizhneyansk</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A9E60F0&gt;</td>
+<td>puro</td>
+<td>ph</td>
+<td>13.13</td>
+<td>81.13</td>
+<td>87</td>
+<td>44</td>
+<td>3.56</td>
+<td>1518832788</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B069C50&gt;</td>
+<td>uzumlu</td>
+<td>tr</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A85C240&gt;</td>
+<td>alcantara</td>
+<td>ph</td>
+<td>9.97</td>
+<td>81.27</td>
+<td>93</td>
+<td>48</td>
+<td>6.76</td>
+<td>1518832789</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A621B00&gt;</td>
+<td>mahebourg</td>
+<td>mu</td>
+<td>-20.41</td>
+<td>78.8</td>
+<td>94</td>
+<td>20</td>
+<td>6.42</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A60D208&gt;</td>
+<td>baruun-urt</td>
+<td>mn</td>
+<td>46.68</td>
+<td>11.47</td>
+<td>68</td>
+<td>0</td>
+<td>4.63</td>
+<td>1518832789</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B535358&gt;</td>
+<td>port alfred</td>
+<td>za</td>
+<td>-33.59</td>
+<td>67.95</td>
+<td>100</td>
+<td>92</td>
+<td>7.36</td>
+<td>1518832790</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1DB978&gt;</td>
+<td>sandpoint</td>
+<td>us</td>
+<td>48.28</td>
+<td>32.5</td>
+<td>81</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEFAA20&gt;</td>
+<td>sovetskiy</td>
+<td>ru</td>
+<td>56.76</td>
+<td>3.19</td>
+<td>84</td>
+<td>68</td>
+<td>8.14</td>
+<td>1518832790</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3B9B38&gt;</td>
+<td>hasaki</td>
+<td>jp</td>
+<td>35.73</td>
+<td>46.4</td>
+<td>70</td>
+<td>40</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499FCF98&gt;</td>
+<td>iqaluit</td>
+<td>ca</td>
+<td>63.75</td>
+<td>-11.21</td>
+<td>42</td>
+<td>75</td>
+<td>12.75</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DC6588&gt;</td>
+<td>bure</td>
+<td>et</td>
+<td>10.52</td>
+<td>66.42</td>
+<td>37</td>
+<td>0</td>
+<td>9.26</td>
+<td>1518832791</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD78198&gt;</td>
+<td>dikson</td>
+<td>ru</td>
+<td>73.51</td>
+<td>-7.84</td>
+<td>96</td>
+<td>12</td>
+<td>12.12</td>
+<td>1518832791</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D49D30&gt;</td>
+<td>cotacachi</td>
+<td>ec</td>
+<td>0.3</td>
+<td>48.73</td>
+<td>100</td>
+<td>56</td>
+<td>0.6</td>
+<td>1518832693</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB37278&gt;</td>
+<td>vila franca do campo</td>
+<td>pt</td>
+<td>37.72</td>
+<td>51.8</td>
+<td>71</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A888D0&gt;</td>
+<td>tabou</td>
+<td>ci</td>
+<td>4.42</td>
+<td>81.76</td>
+<td>100</td>
+<td>32</td>
+<td>13.18</td>
+<td>1518832792</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A372E8&gt;</td>
+<td>tuktoyaktuk</td>
+<td>ca</td>
+<td>69.44</td>
+<td>-5.41</td>
+<td>83</td>
+<td>75</td>
+<td>18.34</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B0BFB70&gt;</td>
+<td>holoby</td>
+<td>ua</td>
+<td>51.09</td>
+<td>26.82</td>
+<td>92</td>
+<td>76</td>
+<td>9.89</td>
+<td>1518832793</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE54668&gt;</td>
+<td>nekhayevskiy</td>
+<td>ru</td>
+<td>50.41</td>
+<td>18.94</td>
+<td>93</td>
+<td>92</td>
+<td>9.89</td>
+<td>1518832793</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B5E48&gt;</td>
+<td>burnie</td>
+<td>au</td>
+<td>-41.05</td>
+<td>63.9</td>
+<td>100</td>
+<td>76</td>
+<td>24.2</td>
+<td>1518832793</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2D7B70&gt;</td>
+<td>zafarabad</td>
+<td>in</td>
+<td>40.39</td>
+<td>25.29</td>
+<td>89</td>
+<td>80</td>
+<td>3.62</td>
+<td>1518832793</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B20FF60&gt;</td>
+<td>garden city</td>
+<td>us</td>
+<td>40.73</td>
+<td>41.04</td>
+<td>56</td>
+<td>1</td>
+<td>11.41</td>
+<td>1518832560</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B5B00&gt;</td>
+<td>broome</td>
+<td>au</td>
+<td>52.47</td>
+<td>33.8</td>
+<td>88</td>
+<td>80</td>
+<td>3.36</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AD2860&gt;</td>
+<td>kaitong</td>
+<td>cn</td>
+<td>44.81</td>
+<td>12.96</td>
+<td>66</td>
+<td>0</td>
+<td>7.02</td>
+<td>1518832794</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B5266D8&gt;</td>
+<td>bredasdorp</td>
+<td>za</td>
+<td>-34.53</td>
+<td>68</td>
+<td>64</td>
+<td>44</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEDACC0&gt;</td>
+<td>severo-yeniseyskiy</td>
+<td>ru</td>
+<td>60.37</td>
+<td>-7.43</td>
+<td>75</td>
+<td>76</td>
+<td>3.06</td>
+<td>1518832795</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4696D8&gt;</td>
+<td>espanola</td>
+<td>us</td>
+<td>46.27</td>
+<td>11.07</td>
+<td>58</td>
+<td>0</td>
+<td>7.31</td>
+<td>1518832795</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DA8908&gt;</td>
+<td>naron</td>
+<td>es</td>
+<td>43.52</td>
+<td>53.14</td>
+<td>100</td>
+<td>68</td>
+<td>13.4</td>
+<td>1518832795</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A61AB38&gt;</td>
+<td>bambous virieux</td>
+<td>mu</td>
+<td>-20.34</td>
+<td>78.8</td>
+<td>94</td>
+<td>20</td>
+<td>6.42</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B8B860&gt;</td>
+<td>san rafael</td>
+<td>co</td>
+<td>-34.61</td>
+<td>61.42</td>
+<td>97</td>
+<td>32</td>
+<td>6.35</td>
+<td>1518832669</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4B5DA0&gt;</td>
+<td>muskogee</td>
+<td>us</td>
+<td>35.75</td>
+<td>43.57</td>
+<td>65</td>
+<td>1</td>
+<td>4.23</td>
+<td>1518830100</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497BECC0&gt;</td>
+<td>kiama</td>
+<td>au</td>
+<td>-34.67</td>
+<td>82.4</td>
+<td>45</td>
+<td>40</td>
+<td>11.41</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB3A908&gt;</td>
+<td>asuncion</td>
+<td>py</td>
+<td>-25.3</td>
+<td>75.2</td>
+<td>83</td>
+<td>90</td>
+<td>3.36</td>
+<td>1518832800</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49BCEBE0&gt;</td>
+<td>sao filipe</td>
+<td>cv</td>
+<td>14.9</td>
+<td>68.62</td>
+<td>100</td>
+<td>68</td>
+<td>16.71</td>
+<td>1518832798</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7F84E0&gt;</td>
+<td>tuatapere</td>
+<td>nz</td>
+<td>-46.13</td>
+<td>60.75</td>
+<td>93</td>
+<td>20</td>
+<td>19.22</td>
+<td>1518832798</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A86BA8&gt;</td>
+<td>katiola</td>
+<td>ci</td>
+<td>8.14</td>
+<td>72.94</td>
+<td>59</td>
+<td>12</td>
+<td>3.74</td>
+<td>1518832798</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF97BE0&gt;</td>
+<td>buraydah</td>
+<td>sa</td>
+<td>26.33</td>
+<td>69.8</td>
+<td>43</td>
+<td>40</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8491D0&gt;</td>
+<td>faanui</td>
+<td>pf</td>
+<td>-16.48</td>
+<td>83.11</td>
+<td>97</td>
+<td>92</td>
+<td>13.35</td>
+<td>1518832799</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B86D8&gt;</td>
+<td>charters towers</td>
+<td>au</td>
+<td>-20.07</td>
+<td>83.61</td>
+<td>99</td>
+<td>48</td>
+<td>4.23</td>
+<td>1518832799</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3D37F0&gt;</td>
+<td>katsuura</td>
+<td>jp</td>
+<td>33.93</td>
+<td>44.6</td>
+<td>45</td>
+<td>20</td>
+<td>23.04</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A0C3C8&gt;</td>
+<td>mayo</td>
+<td>ca</td>
+<td>63.59</td>
+<td>3.2</td>
+<td>84</td>
+<td>40</td>
+<td>2.55</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEDA978&gt;</td>
+<td>severo-kurilsk</td>
+<td>ru</td>
+<td>50.68</td>
+<td>23.89</td>
+<td>100</td>
+<td>44</td>
+<td>12.12</td>
+<td>1518832800</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C5EB8&gt;</td>
+<td>nguiu</td>
+<td>au</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AA64E0&gt;</td>
+<td>altay</td>
+<td>cn</td>
+<td>47.83</td>
+<td>-6.08</td>
+<td>70</td>
+<td>0</td>
+<td>1.99</td>
+<td>1518832800</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD6DB00&gt;</td>
+<td>chokurdakh</td>
+<td>ru</td>
+<td>70.62</td>
+<td>-17.11</td>
+<td>50</td>
+<td>20</td>
+<td>2.89</td>
+<td>1518832801</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B89E8&gt;</td>
+<td>collie</td>
+<td>au</td>
+<td>-33.36</td>
+<td>82.66</td>
+<td>52</td>
+<td>0</td>
+<td>5.64</td>
+<td>1518832801</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978C1D0&gt;</td>
+<td>neuquen</td>
+<td>ar</td>
+<td>-38.95</td>
+<td>84.2</td>
+<td>32</td>
+<td>0</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3AB6D8&gt;</td>
+<td>aioi</td>
+<td>jp</td>
+<td>34.81</td>
+<td>37.4</td>
+<td>74</td>
+<td>75</td>
+<td>11.41</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DDEE80&gt;</td>
+<td>klaksvik</td>
+<td>fo</td>
+<td>62.23</td>
+<td>37.4</td>
+<td>86</td>
+<td>20</td>
+<td>8.05</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497F7EF0&gt;</td>
+<td>bathsheba</td>
+<td>bb</td>
+<td>13.22</td>
+<td>75.2</td>
+<td>83</td>
+<td>40</td>
+<td>14.99</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49E1AD30&gt;</td>
+<td>laon</td>
+<td>fr</td>
+<td>49.56</td>
+<td>33.12</td>
+<td>94</td>
+<td>92</td>
+<td>7.65</td>
+<td>1518832818</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE16630&gt;</td>
+<td>lavrentiya</td>
+<td>ru</td>
+<td>65.58</td>
+<td>30.96</td>
+<td>95</td>
+<td>92</td>
+<td>27.45</td>
+<td>1518832822</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0BE780&gt;</td>
+<td>bengkulu</td>
+<td>id</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C87F0&gt;</td>
+<td>port lincoln</td>
+<td>au</td>
+<td>-34.72</td>
+<td>72.36</td>
+<td>78</td>
+<td>24</td>
+<td>5.57</td>
+<td>1518832825</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498EE7F0&gt;</td>
+<td>feijo</td>
+<td>br</td>
+<td>-3.63</td>
+<td>75.2</td>
+<td>94</td>
+<td>75</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B52E860&gt;</td>
+<td>kuruman</td>
+<td>za</td>
+<td>-27.46</td>
+<td>56.34</td>
+<td>77</td>
+<td>0</td>
+<td>2.77</td>
+<td>1518832738</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DD88D0&gt;</td>
+<td>maarianhamina</td>
+<td>fi</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2DC908&gt;</td>
+<td>rawah</td>
+<td>iq</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF22C88&gt;</td>
+<td>tiksi</td>
+<td>ru</td>
+<td>71.64</td>
+<td>-12.79</td>
+<td>80</td>
+<td>64</td>
+<td>5.64</td>
+<td>1518832828</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C8898&gt;</td>
+<td>port macquarie</td>
+<td>au</td>
+<td>-31.43</td>
+<td>80.6</td>
+<td>54</td>
+<td>75</td>
+<td>12.75</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A84B860&gt;</td>
+<td>tiarei</td>
+<td>pf</td>
+<td>-17.53</td>
+<td>86</td>
+<td>66</td>
+<td>75</td>
+<td>18.34</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4ADB87B8&gt;</td>
+<td>kamenka</td>
+<td>ru</td>
+<td>53.19</td>
+<td>11.52</td>
+<td>83</td>
+<td>80</td>
+<td>9.93</td>
+<td>1518832830</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD2CBE0&gt;</td>
+<td>artyk</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7EA1D0&gt;</td>
+<td>dunedin</td>
+<td>nz</td>
+<td>-45.87</td>
+<td>69.52</td>
+<td>62</td>
+<td>8</td>
+<td>2.51</td>
+<td>1518832559</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49BB3A20&gt;</td>
+<td>parrita</td>
+<td>cr</td>
+<td>9.52</td>
+<td>69.8</td>
+<td>68</td>
+<td>20</td>
+<td>20.8</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B03908&gt;</td>
+<td>xining</td>
+<td>cn</td>
+<td>36.62</td>
+<td>26.82</td>
+<td>67</td>
+<td>88</td>
+<td>3.85</td>
+<td>1518832587</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B132EF0&gt;</td>
+<td>ketchikan</td>
+<td>us</td>
+<td>55.34</td>
+<td>36.16</td>
+<td>74</td>
+<td>90</td>
+<td>4.7</td>
+<td>1518830580</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A84E8D0&gt;</td>
+<td>kavieng</td>
+<td>pg</td>
+<td>-2.57</td>
+<td>79.33</td>
+<td>100</td>
+<td>44</td>
+<td>6.91</td>
+<td>1518832836</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499F1C18&gt;</td>
+<td>fort nelson</td>
+<td>ca</td>
+<td>58.81</td>
+<td>19.4</td>
+<td>79</td>
+<td>75</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B76BA8&gt;</td>
+<td>puerto rico</td>
+<td>co</td>
+<td>-26.82</td>
+<td>76.27</td>
+<td>75</td>
+<td>88</td>
+<td>2.39</td>
+<td>1518832838</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B16D710&gt;</td>
+<td>pacific grove</td>
+<td>us</td>
+<td>36.62</td>
+<td>58.5</td>
+<td>36</td>
+<td>1</td>
+<td>8.05</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7C42B0&gt;</td>
+<td>mehamn</td>
+<td>no</td>
+<td>71.03</td>
+<td>11.74</td>
+<td>82</td>
+<td>48</td>
+<td>2.51</td>
+<td>1518832838</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497D16D8&gt;</td>
+<td>gurgan</td>
+<td>az</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8490F0&gt;</td>
+<td>avera</td>
+<td>pf</td>
+<td>33.19</td>
+<td>73.47</td>
+<td>64</td>
+<td>90</td>
+<td>4.7</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE310F0&gt;</td>
+<td>maloshuyka</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A10BEB8&gt;</td>
+<td>westport</td>
+<td>ie</td>
+<td>53.8</td>
+<td>43.02</td>
+<td>95</td>
+<td>76</td>
+<td>12.17</td>
+<td>1518832755</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A866D8&gt;</td>
+<td>grand-lahou</td>
+<td>ci</td>
+<td>5.24</td>
+<td>78.16</td>
+<td>93</td>
+<td>8</td>
+<td>6.35</td>
+<td>1518832841</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AC1160&gt;</td>
+<td>haibowan</td>
+<td>cn</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B549D68&gt;</td>
+<td>sesheke</td>
+<td>zm</td>
+<td>-17.47</td>
+<td>65.16</td>
+<td>100</td>
+<td>88</td>
+<td>3.29</td>
+<td>1518832841</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D73D68&gt;</td>
+<td>el faiyum</td>
+<td>eg</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49784278&gt;</td>
+<td>namibe</td>
+<td>ao</td>
+<td>-15.19</td>
+<td>76.95</td>
+<td>100</td>
+<td>32</td>
+<td>4.79</td>
+<td>1518832842</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7112B0&gt;</td>
+<td>tomatlan</td>
+<td>mx</td>
+<td>19.93</td>
+<td>72.04</td>
+<td>82</td>
+<td>0</td>
+<td>2.28</td>
+<td>1518832842</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF97CC0&gt;</td>
+<td>jiddah</td>
+<td>sa</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7396A0&gt;</td>
+<td>miri</td>
+<td>my</td>
+<td>10.31</td>
+<td>59.85</td>
+<td>53</td>
+<td>0</td>
+<td>5.08</td>
+<td>1518832843</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DC40F0&gt;</td>
+<td>abiy adi</td>
+<td>et</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EB56A0&gt;</td>
+<td>locharbriggs</td>
+<td>gb</td>
+<td>55.1</td>
+<td>37.4</td>
+<td>86</td>
+<td>92</td>
+<td>17.22</td>
+<td>1518828600</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB28BA8&gt;</td>
+<td>ribeira grande</td>
+<td>pt</td>
+<td>38.52</td>
+<td>57.96</td>
+<td>100</td>
+<td>92</td>
+<td>7.92</td>
+<td>1518832844</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497CE080&gt;</td>
+<td>whyalla</td>
+<td>au</td>
+<td>-33.04</td>
+<td>77</td>
+<td>44</td>
+<td>0</td>
+<td>8.05</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A711080&gt;</td>
+<td>todos santos</td>
+<td>mx</td>
+<td>23.45</td>
+<td>75.74</td>
+<td>64</td>
+<td>40</td>
+<td>4.7</td>
+<td>1518828420</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8382E8&gt;</td>
+<td>pisco</td>
+<td>pe</td>
+<td>-13.71</td>
+<td>73.4</td>
+<td>88</td>
+<td>75</td>
+<td>17.22</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1766A0&gt;</td>
+<td>ridgecrest</td>
+<td>us</td>
+<td>35.62</td>
+<td>62.6</td>
+<td>10</td>
+<td>1</td>
+<td>3.36</td>
+<td>1518828960</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C5DD8&gt;</td>
+<td>new norfolk</td>
+<td>au</td>
+<td>-42.78</td>
+<td>68</td>
+<td>42</td>
+<td>75</td>
+<td>25.28</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B5162E8&gt;</td>
+<td>tuy hoa</td>
+<td>vn</td>
+<td>13.08</td>
+<td>73.66</td>
+<td>92</td>
+<td>68</td>
+<td>7.02</td>
+<td>1518832846</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5DD2E8&gt;</td>
+<td>asfi</td>
+<td>ma</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D52B70&gt;</td>
+<td>san cristobal</td>
+<td>ec</td>
+<td>-0.39</td>
+<td>53.6</td>
+<td>87</td>
+<td>75</td>
+<td>8.05</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AC3588&gt;</td>
+<td>heihe</td>
+<td>cn</td>
+<td>50.24</td>
+<td>1.4</td>
+<td>41</td>
+<td>0</td>
+<td>8.95</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2D71D0&gt;</td>
+<td>yanam</td>
+<td>in</td>
+<td>16.73</td>
+<td>76.77</td>
+<td>80</td>
+<td>24</td>
+<td>4.79</td>
+<td>1518832848</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7F3CF8&gt;</td>
+<td>te anau</td>
+<td>nz</td>
+<td>-45.41</td>
+<td>56.97</td>
+<td>75</td>
+<td>56</td>
+<td>11.45</td>
+<td>1518832848</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A86400&gt;</td>
+<td>divo</td>
+<td>ci</td>
+<td>5.83</td>
+<td>74.34</td>
+<td>90</td>
+<td>8</td>
+<td>7.36</td>
+<td>1518832848</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9FF28&gt;</td>
+<td>umm kaddadah</td>
+<td>sd</td>
+<td>13.6</td>
+<td>65.79</td>
+<td>54</td>
+<td>8</td>
+<td>11.34</td>
+<td>1518832848</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1D4FD0&gt;</td>
+<td>nanakuli</td>
+<td>us</td>
+<td>21.39</td>
+<td>78.37</td>
+<td>73</td>
+<td>75</td>
+<td>6.93</td>
+<td>1518829020</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B0D160&gt;</td>
+<td>yuci</td>
+<td>cn</td>
+<td>37.68</td>
+<td>26.6</td>
+<td>38</td>
+<td>88</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AE55F8&gt;</td>
+<td>nanlong</td>
+<td>cn</td>
+<td>31.35</td>
+<td>50.89</td>
+<td>99</td>
+<td>92</td>
+<td>5.57</td>
+<td>1518832849</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49896780&gt;</td>
+<td>alta floresta</td>
+<td>br</td>
+<td>-9.87</td>
+<td>74.38</td>
+<td>96</td>
+<td>32</td>
+<td>1.88</td>
+<td>1518832850</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD71390&gt;</td>
+<td>chumikan</td>
+<td>ru</td>
+<td>54.72</td>
+<td>5.71</td>
+<td>49</td>
+<td>0</td>
+<td>6.42</td>
+<td>1518832850</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AA1D2B0&gt;</td>
+<td>san policarpo</td>
+<td>ph</td>
+<td>12.18</td>
+<td>81.9</td>
+<td>94</td>
+<td>0</td>
+<td>8.81</td>
+<td>1518832850</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499EF400&gt;</td>
+<td>dunnville</td>
+<td>ca</td>
+<td>42.9</td>
+<td>24.85</td>
+<td>73</td>
+<td>5</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE15A20&gt;</td>
+<td>kytlym</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A426D68&gt;</td>
+<td>willmar</td>
+<td>us</td>
+<td>45.12</td>
+<td>17.6</td>
+<td>66</td>
+<td>1</td>
+<td>5.82</td>
+<td>1518831360</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AFF710&gt;</td>
+<td>xianshuigu</td>
+<td>cn</td>
+<td>38.98</td>
+<td>24.8</td>
+<td>85</td>
+<td>20</td>
+<td>4.47</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7DDC50&gt;</td>
+<td>vardo</td>
+<td>no</td>
+<td>39.62</td>
+<td>37.38</td>
+<td>64</td>
+<td>1</td>
+<td>8.05</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A1E7198&gt;</td>
+<td>kavaratti</td>
+<td>in</td>
+<td>10.57</td>
+<td>82.66</td>
+<td>100</td>
+<td>0</td>
+<td>9.78</td>
+<td>1518832852</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFFC908&gt;</td>
+<td>abu kamal</td>
+<td>sy</td>
+<td>34.45</td>
+<td>52.33</td>
+<td>98</td>
+<td>92</td>
+<td>5.53</td>
+<td>1518832852</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A823358&gt;</td>
+<td>camana</td>
+<td>pe</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF2B3C8&gt;</td>
+<td>troitskoye</td>
+<td>ru</td>
+<td>52.98</td>
+<td>5.98</td>
+<td>82</td>
+<td>64</td>
+<td>4.29</td>
+<td>1518832853</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499E9240&gt;</td>
+<td>clyde river</td>
+<td>ca</td>
+<td>70.47</td>
+<td>-38.21</td>
+<td>65</td>
+<td>1</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7FD198&gt;</td>
+<td>sur</td>
+<td>om</td>
+<td>22.57</td>
+<td>71.55</td>
+<td>93</td>
+<td>0</td>
+<td>1.54</td>
+<td>1518832853</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499EC588&gt;</td>
+<td>dawson creek</td>
+<td>ca</td>
+<td>55.76</td>
+<td>15.06</td>
+<td>66</td>
+<td>90</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B52EE80&gt;</td>
+<td>margate</td>
+<td>za</td>
+<td>-43.03</td>
+<td>68</td>
+<td>42</td>
+<td>75</td>
+<td>25.28</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A54EF98&gt;</td>
+<td>chuy</td>
+<td>uy</td>
+<td>-33.69</td>
+<td>69.07</td>
+<td>86</td>
+<td>0</td>
+<td>12.39</td>
+<td>1518832854</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498B3B38&gt;</td>
+<td>boca do acre</td>
+<td>br</td>
+<td>-8.76</td>
+<td>74.47</td>
+<td>97</td>
+<td>36</td>
+<td>1.83</td>
+<td>1518832854</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1382B0&gt;</td>
+<td>sitka</td>
+<td>us</td>
+<td>37.17</td>
+<td>39.37</td>
+<td>36</td>
+<td>80</td>
+<td>14.85</td>
+<td>1518832854</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A8F128&gt;</td>
+<td>coihaique</td>
+<td>cl</td>
+<td>-45.58</td>
+<td>60.8</td>
+<td>72</td>
+<td>0</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DE1828&gt;</td>
+<td>vestmanna</td>
+<td>fo</td>
+<td>62.16</td>
+<td>37.4</td>
+<td>86</td>
+<td>12</td>
+<td>8.05</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499BD710&gt;</td>
+<td>vilhena</td>
+<td>br</td>
+<td>-12.74</td>
+<td>71.86</td>
+<td>95</td>
+<td>12</td>
+<td>1.99</td>
+<td>1518832855</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A580BE0&gt;</td>
+<td>rungata</td>
+<td>ki</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978CFD0&gt;</td>
+<td>salta</td>
+<td>ar</td>
+<td>-24.79</td>
+<td>62.6</td>
+<td>93</td>
+<td>90</td>
+<td>4.7</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497BE9B0&gt;</td>
+<td>karratha</td>
+<td>au</td>
+<td>-20.74</td>
+<td>92.02</td>
+<td>44</td>
+<td>24</td>
+<td>15.86</td>
+<td>1518832856</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B07CA90&gt;</td>
+<td>yuli</td>
+<td>tw</td>
+<td>10.52</td>
+<td>63.9</td>
+<td>41</td>
+<td>0</td>
+<td>6.76</td>
+<td>1518832856</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498A3C50&gt;</td>
+<td>arinos</td>
+<td>br</td>
+<td>-15.92</td>
+<td>74.29</td>
+<td>63</td>
+<td>80</td>
+<td>7.43</td>
+<td>1518832857</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7D9D68&gt;</td>
+<td>tromso</td>
+<td>no</td>
+<td>69.65</td>
+<td>2.07</td>
+<td>100</td>
+<td>24</td>
+<td>2.1</td>
+<td>1518832857</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9AF60&gt;</td>
+<td>babanusah</td>
+<td>sd</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A594128&gt;</td>
+<td>zaysan</td>
+<td>kz</td>
+<td>47.47</td>
+<td>9.49</td>
+<td>88</td>
+<td>88</td>
+<td>3.22</td>
+<td>1518832857</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49885EF0&gt;</td>
+<td>padilla</td>
+<td>bo</td>
+<td>3.23</td>
+<td>77</td>
+<td>69</td>
+<td>75</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD499B0&gt;</td>
+<td>bilibino</td>
+<td>ru</td>
+<td>68.06</td>
+<td>-4.78</td>
+<td>77</td>
+<td>32</td>
+<td>2.39</td>
+<td>1518832858</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49980EF0&gt;</td>
+<td>santa isabel do rio negro</td>
+<td>br</td>
+<td>-0.41</td>
+<td>73.57</td>
+<td>100</td>
+<td>76</td>
+<td>4.74</td>
+<td>1518832858</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8432B0&gt;</td>
+<td>talara</td>
+<td>pe</td>
+<td>-4.58</td>
+<td>76.81</td>
+<td>76</td>
+<td>56</td>
+<td>6.87</td>
+<td>1518832703</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B516908&gt;</td>
+<td>isangel</td>
+<td>vu</td>
+<td>-19.55</td>
+<td>82.48</td>
+<td>96</td>
+<td>76</td>
+<td>17.43</td>
+<td>1518832858</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B0D4E0&gt;</td>
+<td>yumen</td>
+<td>cn</td>
+<td>40.29</td>
+<td>23.22</td>
+<td>96</td>
+<td>80</td>
+<td>5.64</td>
+<td>1518832859</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE60278&gt;</td>
+<td>nizhniy baskunchak</td>
+<td>ru</td>
+<td>48.22</td>
+<td>14.26</td>
+<td>87</td>
+<td>68</td>
+<td>12.95</td>
+<td>1518832859</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8514E0&gt;</td>
+<td>namatanai</td>
+<td>pg</td>
+<td>-3.66</td>
+<td>84.19</td>
+<td>96</td>
+<td>8</td>
+<td>13.18</td>
+<td>1518832859</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A97978&gt;</td>
+<td>valdivia</td>
+<td>cl</td>
+<td>-39.81</td>
+<td>62.6</td>
+<td>88</td>
+<td>36</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AB45C0&gt;</td>
+<td>dayong</td>
+<td>cn</td>
+<td>11.74</td>
+<td>81.04</td>
+<td>97</td>
+<td>0</td>
+<td>14.36</td>
+<td>1518832860</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEB4AC8&gt;</td>
+<td>provideniya</td>
+<td>ru</td>
+<td>64.42</td>
+<td>31.99</td>
+<td>91</td>
+<td>92</td>
+<td>29.01</td>
+<td>1518832860</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A621588&gt;</td>
+<td>grand river south east</td>
+<td>mu</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A8B1D0&gt;</td>
+<td>ancud</td>
+<td>cl</td>
+<td>-41.87</td>
+<td>61.47</td>
+<td>98</td>
+<td>92</td>
+<td>5.08</td>
+<td>1518832861</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9AD30&gt;</td>
+<td>victoria</td>
+<td>sc</td>
+<td>5.28</td>
+<td>78.82</td>
+<td>94</td>
+<td>90</td>
+<td>3.36</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB41278&gt;</td>
+<td>doctor pedro p. pena</td>
+<td>py</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498BD6A0&gt;</td>
+<td>cabedelo</td>
+<td>br</td>
+<td>-6.97</td>
+<td>78.8</td>
+<td>83</td>
+<td>75</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D45320&gt;</td>
+<td>constantine</td>
+<td>dz</td>
+<td>36.36</td>
+<td>46.4</td>
+<td>87</td>
+<td>0</td>
+<td>2.24</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499799E8&gt;</td>
+<td>rio grande</td>
+<td>br</td>
+<td>-32.03</td>
+<td>71.82</td>
+<td>88</td>
+<td>20</td>
+<td>14.92</td>
+<td>1518832707</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B519198&gt;</td>
+<td>vaitupu</td>
+<td>wf</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AD07F0&gt;</td>
+<td>jinji</td>
+<td>cn</td>
+<td>22.16</td>
+<td>77.67</td>
+<td>58</td>
+<td>12</td>
+<td>6.91</td>
+<td>1518832863</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF44DD8&gt;</td>
+<td>ust-nera</td>
+<td>ru</td>
+<td>64.57</td>
+<td>-16.48</td>
+<td>64</td>
+<td>12</td>
+<td>2.55</td>
+<td>1518832863</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A74BA90&gt;</td>
+<td>noumea</td>
+<td>nc</td>
+<td>-22.28</td>
+<td>80.6</td>
+<td>88</td>
+<td>90</td>
+<td>18.34</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A58CF28&gt;</td>
+<td>lisakovsk</td>
+<td>kz</td>
+<td>52.55</td>
+<td>8.59</td>
+<td>73</td>
+<td>68</td>
+<td>3</td>
+<td>1518832863</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B11198&gt;</td>
+<td>zhangjiakou</td>
+<td>cn</td>
+<td>40.77</td>
+<td>28.48</td>
+<td>30</td>
+<td>24</td>
+<td>1.72</td>
+<td>1518832864</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6ED160&gt;</td>
+<td>sonoita</td>
+<td>mx</td>
+<td>31.68</td>
+<td>54.03</td>
+<td>93</td>
+<td>90</td>
+<td>3.36</td>
+<td>1518831360</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B132C88&gt;</td>
+<td>homer</td>
+<td>us</td>
+<td>59.64</td>
+<td>33.8</td>
+<td>64</td>
+<td>1</td>
+<td>9.17</td>
+<td>1518828780</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49BCE898&gt;</td>
+<td>ponta do sol</td>
+<td>cv</td>
+<td>-20.63</td>
+<td>64.71</td>
+<td>94</td>
+<td>80</td>
+<td>3.85</td>
+<td>1518832865</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0DE0B8&gt;</td>
+<td>palabuhanratu</td>
+<td>id</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7FA2B0&gt;</td>
+<td>wanaka</td>
+<td>nz</td>
+<td>-44.7</td>
+<td>68.17</td>
+<td>30</td>
+<td>0</td>
+<td>4.74</td>
+<td>1518832865</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F003C8&gt;</td>
+<td>qaqortoq</td>
+<td>gl</td>
+<td>60.72</td>
+<td>6.8</td>
+<td>46</td>
+<td>44</td>
+<td>4.7</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5EC978&gt;</td>
+<td>tsihombe</td>
+<td>mg</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF44550&gt;</td>
+<td>ust-kamchatsk</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1D4E80&gt;</td>
+<td>makakilo city</td>
+<td>us</td>
+<td>21.35</td>
+<td>78.35</td>
+<td>57</td>
+<td>20</td>
+<td>10.29</td>
+<td>1518829020</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7E4A20&gt;</td>
+<td>bluff</td>
+<td>nz</td>
+<td>-23.58</td>
+<td>88.29</td>
+<td>79</td>
+<td>24</td>
+<td>4.41</td>
+<td>1518832866</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A53630&gt;</td>
+<td>impfondo</td>
+<td>cg</td>
+<td>1.62</td>
+<td>74.34</td>
+<td>96</td>
+<td>36</td>
+<td>3.33</td>
+<td>1518832866</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A588C18&gt;</td>
+<td>emba</td>
+<td>kz</td>
+<td>34.81</td>
+<td>54.79</td>
+<td>87</td>
+<td>75</td>
+<td>9.17</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A746E80&gt;</td>
+<td>luderitz</td>
+<td>na</td>
+<td>-26.65</td>
+<td>62.6</td>
+<td>82</td>
+<td>0</td>
+<td>3.36</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0DAE10&gt;</td>
+<td>mlonggo</td>
+<td>id</td>
+<td>-6.53</td>
+<td>82.57</td>
+<td>88</td>
+<td>48</td>
+<td>6.02</td>
+<td>1518832867</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B84160&gt;</td>
+<td>san andres</td>
+<td>co</td>
+<td>13.32</td>
+<td>80.32</td>
+<td>100</td>
+<td>56</td>
+<td>6.35</td>
+<td>1518832868</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B53D390&gt;</td>
+<td>umzimvubu</td>
+<td>za</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978C0F0&gt;</td>
+<td>necochea</td>
+<td>ar</td>
+<td>-38.55</td>
+<td>75.69</td>
+<td>63</td>
+<td>24</td>
+<td>16.87</td>
+<td>1518832868</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9A080&gt;</td>
+<td>riyadh</td>
+<td>sa</td>
+<td>24.63</td>
+<td>66.2</td>
+<td>29</td>
+<td>0</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF16F60&gt;</td>
+<td>talaya</td>
+<td>ru</td>
+<td>55.79</td>
+<td>-0.73</td>
+<td>79</td>
+<td>68</td>
+<td>6.76</td>
+<td>1518832869</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499BD630&gt;</td>
+<td>vila velha</td>
+<td>br</td>
+<td>-3.71</td>
+<td>74.52</td>
+<td>100</td>
+<td>92</td>
+<td>5.3</td>
+<td>1518832869</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF266A0&gt;</td>
+<td>togur</td>
+<td>ru</td>
+<td>58.36</td>
+<td>2.52</td>
+<td>88</td>
+<td>76</td>
+<td>7.58</td>
+<td>1518832869</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4156A0&gt;</td>
+<td>wajima</td>
+<td>jp</td>
+<td>37.4</td>
+<td>30.2</td>
+<td>100</td>
+<td>90</td>
+<td>10.29</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFE6748&gt;</td>
+<td>saint-louis</td>
+<td>sn</td>
+<td>47.59</td>
+<td>40.23</td>
+<td>86</td>
+<td>75</td>
+<td>6.93</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEEA9E8&gt;</td>
+<td>silikatnyy</td>
+<td>ru</td>
+<td>53.99</td>
+<td>1.4</td>
+<td>84</td>
+<td>64</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A533C8&gt;</td>
+<td>djambala</td>
+<td>cg</td>
+<td>-2.55</td>
+<td>71.91</td>
+<td>97</td>
+<td>88</td>
+<td>7.87</td>
+<td>1518832871</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B54E160&gt;</td>
+<td>mutoko</td>
+<td>zw</td>
+<td>-17.4</td>
+<td>68.98</td>
+<td>91</td>
+<td>8</td>
+<td>4.74</td>
+<td>1518832871</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD71F98&gt;</td>
+<td>dauriya</td>
+<td>ru</td>
+<td>49.93</td>
+<td>4.14</td>
+<td>58</td>
+<td>0</td>
+<td>4.74</td>
+<td>1518832874</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B132BA8&gt;</td>
+<td>fairbanks</td>
+<td>us</td>
+<td>64.84</td>
+<td>14.04</td>
+<td>92</td>
+<td>1</td>
+<td>2.77</td>
+<td>1518830880</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0E14E0&gt;</td>
+<td>pemangkat</td>
+<td>id</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4ADAC9E8&gt;</td>
+<td>iskateley</td>
+<td>ru</td>
+<td>67.68</td>
+<td>18.54</td>
+<td>90</td>
+<td>88</td>
+<td>21.97</td>
+<td>1518832875</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D733C8&gt;</td>
+<td>aswan</td>
+<td>eg</td>
+<td>24.09</td>
+<td>55.4</td>
+<td>37</td>
+<td>0</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5825C0&gt;</td>
+<td>charlestown</td>
+<td>kn</td>
+<td>41.38</td>
+<td>42.98</td>
+<td>82</td>
+<td>0</td>
+<td>10.29</td>
+<td>1518832440</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9A9E8&gt;</td>
+<td>honiara</td>
+<td>sb</td>
+<td>-9.43</td>
+<td>87.8</td>
+<td>66</td>
+<td>75</td>
+<td>11.41</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DFF080&gt;</td>
+<td>chateauroux</td>
+<td>fr</td>
+<td>43.72</td>
+<td>52.63</td>
+<td>82</td>
+<td>0</td>
+<td>1.12</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AED1828&gt;</td>
+<td>saskylakh</td>
+<td>ru</td>
+<td>71.97</td>
+<td>-18.1</td>
+<td>53</td>
+<td>56</td>
+<td>3.33</td>
+<td>1518832876</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF44BE0&gt;</td>
+<td>ust-kuyga</td>
+<td>ru</td>
+<td>70</td>
+<td>-22.15</td>
+<td>64</td>
+<td>36</td>
+<td>3.89</td>
+<td>1518832877</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49927208&gt;</td>
+<td>laguna</td>
+<td>br</td>
+<td>27.52</td>
+<td>73.4</td>
+<td>64</td>
+<td>75</td>
+<td>9.17</td>
+<td>1518828000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AF92E8&gt;</td>
+<td>tianpeng</td>
+<td>cn</td>
+<td>28.88</td>
+<td>55.8</td>
+<td>98</td>
+<td>32</td>
+<td>6.87</td>
+<td>1518832877</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B07B38&gt;</td>
+<td>yatou</td>
+<td>cn</td>
+<td>3.63</td>
+<td>78.8</td>
+<td>100</td>
+<td>75</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0DAC88&gt;</td>
+<td>meulaboh</td>
+<td>id</td>
+<td>4.14</td>
+<td>82.48</td>
+<td>100</td>
+<td>0</td>
+<td>4.74</td>
+<td>1518832878</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A1BFE48&gt;</td>
+<td>jagdalpur</td>
+<td>in</td>
+<td>19.09</td>
+<td>69.79</td>
+<td>45</td>
+<td>0</td>
+<td>4.63</td>
+<td>1518832878</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A82D5C0&gt;</td>
+<td>ilo</td>
+<td>pe</td>
+<td>-17.65</td>
+<td>63.72</td>
+<td>96</td>
+<td>0</td>
+<td>2.21</td>
+<td>1518832878</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AD0668&gt;</td>
+<td>jining</td>
+<td>cn</td>
+<td>35.41</td>
+<td>42.66</td>
+<td>62</td>
+<td>88</td>
+<td>13.47</td>
+<td>1518832878</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F002B0&gt;</td>
+<td>paamiut</td>
+<td>gl</td>
+<td>61.99</td>
+<td>15.66</td>
+<td>100</td>
+<td>20</td>
+<td>14.36</td>
+<td>1518832879</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6F7198&gt;</td>
+<td>tecolutilla</td>
+<td>mx</td>
+<td>18.28</td>
+<td>77</td>
+<td>69</td>
+<td>5</td>
+<td>6.93</td>
+<td>1518828000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978CA20&gt;</td>
+<td>rawson</td>
+<td>ar</td>
+<td>-43.3</td>
+<td>63.31</td>
+<td>57</td>
+<td>0</td>
+<td>5.41</td>
+<td>1518832879</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497BB588&gt;</td>
+<td>emerald</td>
+<td>au</td>
+<td>-23.53</td>
+<td>93.46</td>
+<td>59</td>
+<td>12</td>
+<td>4.79</td>
+<td>1518832880</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3FEE80&gt;</td>
+<td>shimoda</td>
+<td>jp</td>
+<td>34.7</td>
+<td>51.8</td>
+<td>100</td>
+<td>20</td>
+<td>16.11</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49782B70&gt;</td>
+<td>luanda</td>
+<td>ao</td>
+<td>-8.83</td>
+<td>82.4</td>
+<td>83</td>
+<td>40</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A1F978&gt;</td>
+<td>roberval</td>
+<td>ca</td>
+<td>48.51</td>
+<td>3.2</td>
+<td>59</td>
+<td>20</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AD27B8&gt;</td>
+<td>kaili</td>
+<td>cn</td>
+<td>-3.46</td>
+<td>85.77</td>
+<td>52</td>
+<td>36</td>
+<td>1.28</td>
+<td>1518832881</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499E2B00&gt;</td>
+<td>carberry</td>
+<td>ca</td>
+<td>49.87</td>
+<td>5</td>
+<td>77</td>
+<td>75</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD262B0&gt;</td>
+<td>anadyr</td>
+<td>ru</td>
+<td>64.73</td>
+<td>32</td>
+<td>96</td>
+<td>90</td>
+<td>22.37</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6129E8&gt;</td>
+<td>nouakchott</td>
+<td>mr</td>
+<td>18.08</td>
+<td>62.59</td>
+<td>97</td>
+<td>88</td>
+<td>13.91</td>
+<td>1518832881</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFD72E8&gt;</td>
+<td>bonthe</td>
+<td>sl</td>
+<td>7.53</td>
+<td>76.72</td>
+<td>84</td>
+<td>0</td>
+<td>5.41</td>
+<td>1518832882</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A62A320&gt;</td>
+<td>thinadhoo</td>
+<td>mv</td>
+<td>0.53</td>
+<td>80.46</td>
+<td>100</td>
+<td>64</td>
+<td>3.89</td>
+<td>1518832882</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF2EF60&gt;</td>
+<td>tumannyy</td>
+<td>ru</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AA0FF98&gt;</td>
+<td>san juan</td>
+<td>ph</td>
+<td>18.47</td>
+<td>73.4</td>
+<td>94</td>
+<td>40</td>
+<td>4.7</td>
+<td>1518828960</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEF1358&gt;</td>
+<td>smolenka</td>
+<td>ru</td>
+<td>54.15</td>
+<td>28.89</td>
+<td>93</td>
+<td>80</td>
+<td>14.58</td>
+<td>1518832884</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49738F60&gt;</td>
+<td>sharjah</td>
+<td>ae</td>
+<td>25.36</td>
+<td>62.33</td>
+<td>60</td>
+<td>0</td>
+<td>5.82</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9A908&gt;</td>
+<td>buala</td>
+<td>sb</td>
+<td>-8.15</td>
+<td>86.4</td>
+<td>76</td>
+<td>64</td>
+<td>11.61</td>
+<td>1518832884</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2F9860&gt;</td>
+<td>olafsvik</td>
+<td>is</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3A96D8&gt;</td>
+<td>qafqafa</td>
+<td>jo</td>
+<td>32.35</td>
+<td>51.8</td>
+<td>81</td>
+<td>75</td>
+<td>5.82</td>
+<td>1518832800</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498F5DA0&gt;</td>
+<td>goiatuba</td>
+<td>br</td>
+<td>-18.02</td>
+<td>70.74</td>
+<td>81</td>
+<td>44</td>
+<td>2.89</td>
+<td>1518832885</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49992668&gt;</td>
+<td>sao jose da coroa grande</td>
+<td>br</td>
+<td>-8.9</td>
+<td>73.26</td>
+<td>100</td>
+<td>88</td>
+<td>2.77</td>
+<td>1518832886</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4E7438&gt;</td>
+<td>madison</td>
+<td>us</td>
+<td>43.07</td>
+<td>18.93</td>
+<td>53</td>
+<td>1</td>
+<td>9.17</td>
+<td>1518830100</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D43F60&gt;</td>
+<td>adrar</td>
+<td>dz</td>
+<td>27.87</td>
+<td>59</td>
+<td>18</td>
+<td>40</td>
+<td>8.05</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49749080&gt;</td>
+<td>codrington</td>
+<td>ag</td>
+<td>-28.95</td>
+<td>74.83</td>
+<td>90</td>
+<td>80</td>
+<td>6.13</td>
+<td>1518832886</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4099E8&gt;</td>
+<td>tateyama</td>
+<td>jp</td>
+<td>36.66</td>
+<td>39.2</td>
+<td>69</td>
+<td>75</td>
+<td>17.22</td>
+<td>1518830340</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6D10B8&gt;</td>
+<td>puerto escondido</td>
+<td>mx</td>
+<td>15.86</td>
+<td>80.6</td>
+<td>74</td>
+<td>40</td>
+<td>1.99</td>
+<td>1518828000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF97F98&gt;</td>
+<td>najran</td>
+<td>sa</td>
+<td>17.54</td>
+<td>59</td>
+<td>24</td>
+<td>0</td>
+<td>3.56</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AB8908&gt;</td>
+<td>dunhua</td>
+<td>cn</td>
+<td>43.37</td>
+<td>6.88</td>
+<td>59</td>
+<td>32</td>
+<td>11.95</td>
+<td>1518832887</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4420B8&gt;</td>
+<td>winnemucca</td>
+<td>us</td>
+<td>40.97</td>
+<td>39.2</td>
+<td>35</td>
+<td>1</td>
+<td>9.17</td>
+<td>1518832560</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF4BDA0&gt;</td>
+<td>vanavara</td>
+<td>ru</td>
+<td>60.35</td>
+<td>-6.85</td>
+<td>73</td>
+<td>48</td>
+<td>4.85</td>
+<td>1518832888</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFE6390&gt;</td>
+<td>oussouye</td>
+<td>sn</td>
+<td>12.49</td>
+<td>75.2</td>
+<td>41</td>
+<td>88</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7E4588&gt;</td>
+<td>alofi</td>
+<td>nu</td>
+<td>-19.06</td>
+<td>84.2</td>
+<td>62</td>
+<td>75</td>
+<td>17.22</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFDFC18&gt;</td>
+<td>dakar</td>
+<td>sn</td>
+<td>14.69</td>
+<td>62.6</td>
+<td>88</td>
+<td>80</td>
+<td>9.17</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AECD550&gt;</td>
+<td>samoded</td>
+<td>ru</td>
+<td>63.61</td>
+<td>13.54</td>
+<td>88</td>
+<td>80</td>
+<td>4.29</td>
+<td>1518832889</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B032A90&gt;</td>
+<td>hisor</td>
+<td>tj</td>
+<td>38.53</td>
+<td>35.6</td>
+<td>93</td>
+<td>40</td>
+<td>4.47</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EF52B0&gt;</td>
+<td>saint-georges</td>
+<td>gf</td>
+<td>46.12</td>
+<td>13.63</td>
+<td>56</td>
+<td>0</td>
+<td>10.04</td>
+<td>1518832889</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD451D0&gt;</td>
+<td>berdigestyakh</td>
+<td>ru</td>
+<td>62.1</td>
+<td>-7.93</td>
+<td>62</td>
+<td>56</td>
+<td>6.08</td>
+<td>1518832890</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD33400&gt;</td>
+<td>ayan</td>
+<td>ru</td>
+<td>40.67</td>
+<td>22.99</td>
+<td>77</td>
+<td>8</td>
+<td>2.21</td>
+<td>1518832890</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C8748&gt;</td>
+<td>portland</td>
+<td>au</td>
+<td>45.52</td>
+<td>50</td>
+<td>81</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518830940</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A169B0&gt;</td>
+<td>pangnirtung</td>
+<td>ca</td>
+<td>66.15</td>
+<td>-31.24</td>
+<td>52</td>
+<td>0</td>
+<td>4.07</td>
+<td>1518832890</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB149E8&gt;</td>
+<td>lagoa</td>
+<td>pt</td>
+<td>37.14</td>
+<td>48.2</td>
+<td>93</td>
+<td>0</td>
+<td>4.7</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A126A0&gt;</td>
+<td>norman wells</td>
+<td>ca</td>
+<td>65.28</td>
+<td>12.2</td>
+<td>72</td>
+<td>75</td>
+<td>18.34</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A603400&gt;</td>
+<td>nara</td>
+<td>ml</td>
+<td>34.68</td>
+<td>47.34</td>
+<td>52</td>
+<td>40</td>
+<td>23.04</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49924358&gt;</td>
+<td>juquitiba</td>
+<td>br</td>
+<td>-23.93</td>
+<td>65.35</td>
+<td>82</td>
+<td>40</td>
+<td>9.17</td>
+<td>1518829380</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F00198&gt;</td>
+<td>nuuk</td>
+<td>gl</td>
+<td>64.17</td>
+<td>8.6</td>
+<td>92</td>
+<td>8</td>
+<td>14.99</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9ABA8&gt;</td>
+<td>kirakira</td>
+<td>sb</td>
+<td>-10.46</td>
+<td>84.69</td>
+<td>100</td>
+<td>8</td>
+<td>13.62</td>
+<td>1518832658</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7F3320&gt;</td>
+<td>ruatoria</td>
+<td>nz</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4997DFD0&gt;</td>
+<td>salinopolis</td>
+<td>br</td>
+<td>-0.61</td>
+<td>79.65</td>
+<td>99</td>
+<td>76</td>
+<td>9.33</td>
+<td>1518832896</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB37F98&gt;</td>
+<td>airai</td>
+<td>pw</td>
+<td>-8.93</td>
+<td>79.02</td>
+<td>76</td>
+<td>64</td>
+<td>2.1</td>
+<td>1518832896</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE87128&gt;</td>
+<td>ossora</td>
+<td>ru</td>
+<td>59.24</td>
+<td>20.47</td>
+<td>88</td>
+<td>44</td>
+<td>16.08</td>
+<td>1518832896</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF59198&gt;</td>
+<td>verkhoyansk</td>
+<td>ru</td>
+<td>67.55</td>
+<td>-24.94</td>
+<td>73</td>
+<td>56</td>
+<td>2.51</td>
+<td>1518832897</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A60D630&gt;</td>
+<td>hovd</td>
+<td>mn</td>
+<td>63.83</td>
+<td>32.77</td>
+<td>100</td>
+<td>90</td>
+<td>5.82</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE04A58&gt;</td>
+<td>kropotkin</td>
+<td>ru</td>
+<td>45.43</td>
+<td>35.14</td>
+<td>92</td>
+<td>44</td>
+<td>11.61</td>
+<td>1518832897</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A84E320&gt;</td>
+<td>daru</td>
+<td>pg</td>
+<td>7.99</td>
+<td>75.82</td>
+<td>70</td>
+<td>0</td>
+<td>7.31</td>
+<td>1518832897</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B51C4A8&gt;</td>
+<td>saleaula</td>
+<td>ws</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B5352E8&gt;</td>
+<td>plettenberg bay</td>
+<td>za</td>
+<td>-34.05</td>
+<td>65.52</td>
+<td>100</td>
+<td>56</td>
+<td>9.6</td>
+<td>1518832898</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5DA518&gt;</td>
+<td>nalut</td>
+<td>ly</td>
+<td>31.86</td>
+<td>41.71</td>
+<td>92</td>
+<td>76</td>
+<td>2.84</td>
+<td>1518832898</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A585438&gt;</td>
+<td>aksu</td>
+<td>kz</td>
+<td>52.04</td>
+<td>-9.41</td>
+<td>83</td>
+<td>75</td>
+<td>2.24</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2F9588&gt;</td>
+<td>husavik</td>
+<td>is</td>
+<td>50.56</td>
+<td>13.86</td>
+<td>78</td>
+<td>48</td>
+<td>10.16</td>
+<td>1518832899</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A661FD0&gt;</td>
+<td>coahuayana</td>
+<td>mx</td>
+<td>18.62</td>
+<td>64.57</td>
+<td>67</td>
+<td>0</td>
+<td>2.06</td>
+<td>1518832899</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AC1A20&gt;</td>
+<td>hami</td>
+<td>cn</td>
+<td>42.84</td>
+<td>27.31</td>
+<td>76</td>
+<td>80</td>
+<td>6.24</td>
+<td>1518832899</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B535400&gt;</td>
+<td>port elizabeth</td>
+<td>za</td>
+<td>39.31</td>
+<td>46.44</td>
+<td>61</td>
+<td>20</td>
+<td>11.41</td>
+<td>1518832500</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A84EA58&gt;</td>
+<td>kieta</td>
+<td>pg</td>
+<td>-6.22</td>
+<td>83.38</td>
+<td>91</td>
+<td>8</td>
+<td>11.12</td>
+<td>1518832900</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D45160&gt;</td>
+<td>aflu</td>
+<td>dz</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B502208&gt;</td>
+<td>ciudad bolivar</td>
+<td>ve</td>
+<td>8.12</td>
+<td>79.47</td>
+<td>65</td>
+<td>68</td>
+<td>11.39</td>
+<td>1518832901</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498A3F98&gt;</td>
+<td>arraial do cabo</td>
+<td>br</td>
+<td>-22.97</td>
+<td>74.11</td>
+<td>99</td>
+<td>20</td>
+<td>5.91</td>
+<td>1518832901</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B0027F0&gt;</td>
+<td>adre</td>
+<td>td</td>
+<td>13.47</td>
+<td>71.19</td>
+<td>39</td>
+<td>88</td>
+<td>10.38</td>
+<td>1518832901</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AEDDA0&gt;</td>
+<td>sanming</td>
+<td>cn</td>
+<td>26.24</td>
+<td>62.01</td>
+<td>76</td>
+<td>44</td>
+<td>2.84</td>
+<td>1518832901</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD4F6A0&gt;</td>
+<td>bograd</td>
+<td>ru</td>
+<td>54.22</td>
+<td>-2.21</td>
+<td>77</td>
+<td>40</td>
+<td>2.84</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5A5588&gt;</td>
+<td>harper</td>
+<td>lr</td>
+<td>30.3</td>
+<td>63.27</td>
+<td>39</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518830100</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFE7D30&gt;</td>
+<td>hobyo</td>
+<td>so</td>
+<td>5.35</td>
+<td>75.24</td>
+<td>86</td>
+<td>64</td>
+<td>16.31</td>
+<td>1518832902</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A74E518&gt;</td>
+<td>vao</td>
+<td>nc</td>
+<td>59.1</td>
+<td>21.19</td>
+<td>92</td>
+<td>80</td>
+<td>5.91</td>
+<td>1518832902</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A06E80&gt;</td>
+<td>louisbourg</td>
+<td>ca</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A3ADA0&gt;</td>
+<td>wawa</td>
+<td>ca</td>
+<td>9.9</td>
+<td>70.74</td>
+<td>43</td>
+<td>0</td>
+<td>7.54</td>
+<td>1518832903</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD56358&gt;</td>
+<td>bolshoye nagatkino</td>
+<td>ru</td>
+<td>54.52</td>
+<td>1.4</td>
+<td>84</td>
+<td>56</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B52E780&gt;</td>
+<td>kruisfontein</td>
+<td>za</td>
+<td>-34</td>
+<td>63.54</td>
+<td>92</td>
+<td>76</td>
+<td>6.35</td>
+<td>1518832904</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4ADD59B0&gt;</td>
+<td>kichmengskiy gorodok</td>
+<td>ru</td>
+<td>59.99</td>
+<td>15.07</td>
+<td>87</td>
+<td>92</td>
+<td>6.91</td>
+<td>1518832904</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5DA208&gt;</td>
+<td>marzuq</td>
+<td>ly</td>
+<td>14.4</td>
+<td>34.33</td>
+<td>89</td>
+<td>0</td>
+<td>2.33</td>
+<td>1518832904</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499BF6D8&gt;</td>
+<td>clarence town</td>
+<td>bs</td>
+<td>-32.59</td>
+<td>80.6</td>
+<td>57</td>
+<td>40</td>
+<td>16.11</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499AD9E8&gt;</td>
+<td>touros</td>
+<td>br</td>
+<td>-5.2</td>
+<td>74.92</td>
+<td>100</td>
+<td>92</td>
+<td>6.58</td>
+<td>1518832905</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49E13160&gt;</td>
+<td>gueret</td>
+<td>fr</td>
+<td>46.17</td>
+<td>50</td>
+<td>100</td>
+<td>92</td>
+<td>6.93</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A4F5C0&gt;</td>
+<td>ippy</td>
+<td>cf</td>
+<td>6.26</td>
+<td>68.98</td>
+<td>91</td>
+<td>44</td>
+<td>7.09</td>
+<td>1518832905</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AB8B70&gt;</td>
+<td>encheng</td>
+<td>cn</td>
+<td>22.74</td>
+<td>67.99</td>
+<td>84</td>
+<td>76</td>
+<td>5.57</td>
+<td>1518832905</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A553128&gt;</td>
+<td>rocha</td>
+<td>uy</td>
+<td>-34.48</td>
+<td>68.04</td>
+<td>71</td>
+<td>0</td>
+<td>11.61</td>
+<td>1518832906</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A74BB70&gt;</td>
+<td>ouegoa</td>
+<td>nc</td>
+<td>-20.34</td>
+<td>79.29</td>
+<td>87</td>
+<td>80</td>
+<td>15.86</td>
+<td>1518832906</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A774B00&gt;</td>
+<td>wiwili</td>
+<td>ni</td>
+<td>13.63</td>
+<td>65.56</td>
+<td>97</td>
+<td>100</td>
+<td>2.51</td>
+<td>1518832906</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49784908&gt;</td>
+<td>bahia blanca</td>
+<td>ar</td>
+<td>-38.72</td>
+<td>69.07</td>
+<td>100</td>
+<td>64</td>
+<td>0.98</td>
+<td>1518832839</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A612710&gt;</td>
+<td>atar</td>
+<td>mr</td>
+<td>20.52</td>
+<td>62.41</td>
+<td>88</td>
+<td>92</td>
+<td>3.56</td>
+<td>1518832907</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF8DAC8&gt;</td>
+<td>zheshart</td>
+<td>ru</td>
+<td>62.09</td>
+<td>13.59</td>
+<td>82</td>
+<td>80</td>
+<td>6.35</td>
+<td>1518832907</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD73B00&gt;</td>
+<td>deputatskiy</td>
+<td>ru</td>
+<td>69.3</td>
+<td>-21.16</td>
+<td>58</td>
+<td>0</td>
+<td>3</td>
+<td>1518832907</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A972E8&gt;</td>
+<td>talcahuano</td>
+<td>cl</td>
+<td>-36.72</td>
+<td>64.4</td>
+<td>77</td>
+<td>0</td>
+<td>9.17</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DA00F0&gt;</td>
+<td>los llanos de aridane</td>
+<td>es</td>
+<td>28.66</td>
+<td>60.8</td>
+<td>72</td>
+<td>0</td>
+<td>10.29</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AED3710&gt;</td>
+<td>sedkyrkeshch</td>
+<td>ru</td>
+<td>61.72</td>
+<td>14</td>
+<td>92</td>
+<td>90</td>
+<td>4.47</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B51C7B8&gt;</td>
+<td>samusu</td>
+<td>ws</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49969400&gt;</td>
+<td>pocos de caldas</td>
+<td>br</td>
+<td>-21.79</td>
+<td>65.25</td>
+<td>89</td>
+<td>32</td>
+<td>2.84</td>
+<td>1518832909</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFC40B8&gt;</td>
+<td>longyearbyen</td>
+<td>sj</td>
+<td>78.22</td>
+<td>6.8</td>
+<td>77</td>
+<td>0</td>
+<td>5.82</td>
+<td>1518828600</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A59E748&gt;</td>
+<td>kalmunai</td>
+<td>lk</td>
+<td>7.42</td>
+<td>76.18</td>
+<td>89</td>
+<td>8</td>
+<td>6.35</td>
+<td>1518832909</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C55F8&gt;</td>
+<td>mount isa</td>
+<td>au</td>
+<td>-20.73</td>
+<td>104</td>
+<td>11</td>
+<td>32</td>
+<td>17.22</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8519B0&gt;</td>
+<td>samarai</td>
+<td>pg</td>
+<td>-10.62</td>
+<td>85.36</td>
+<td>94</td>
+<td>0</td>
+<td>20.74</td>
+<td>1518832910</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B50D9E8&gt;</td>
+<td>bac lieu</td>
+<td>vn</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7AFA90&gt;</td>
+<td>finnsnes</td>
+<td>no</td>
+<td>69.23</td>
+<td>-11.21</td>
+<td>76</td>
+<td>24</td>
+<td>2.33</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A266CC0&gt;</td>
+<td>port blair</td>
+<td>in</td>
+<td>11.67</td>
+<td>79.78</td>
+<td>100</td>
+<td>0</td>
+<td>8.77</td>
+<td>1518832911</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A4B2940&gt;</td>
+<td>ada</td>
+<td>us</td>
+<td>47.3</td>
+<td>21.16</td>
+<td>62</td>
+<td>1</td>
+<td>18.34</td>
+<td>1518832380</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A2AAC8&gt;</td>
+<td>senneterre</td>
+<td>ca</td>
+<td>48.39</td>
+<td>5</td>
+<td>77</td>
+<td>5</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B5138D0&gt;</td>
+<td>qui nhon</td>
+<td>vn</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6F3F60&gt;</td>
+<td>tecoanapa</td>
+<td>mx</td>
+<td>16.99</td>
+<td>80.6</td>
+<td>78</td>
+<td>40</td>
+<td>8.05</td>
+<td>1518828240</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B516CC0&gt;</td>
+<td>vila</td>
+<td>vu</td>
+<td>45.18</td>
+<td>39.2</td>
+<td>100</td>
+<td>90</td>
+<td>5.82</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6A6240&gt;</td>
+<td>los altos</td>
+<td>mx</td>
+<td>-28.05</td>
+<td>72.67</td>
+<td>78</td>
+<td>36</td>
+<td>3.11</td>
+<td>1518832860</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF519E8&gt;</td>
+<td>verkhnevilyuysk</td>
+<td>ru</td>
+<td>63.45</td>
+<td>-7.57</td>
+<td>62</td>
+<td>64</td>
+<td>4</td>
+<td>1518832913</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5E6470&gt;</td>
+<td>ambodifototra</td>
+<td>mg</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7EB048&gt;</td>
+<td>kaitangata</td>
+<td>nz</td>
+<td>-46.28</td>
+<td>68.49</td>
+<td>51</td>
+<td>8</td>
+<td>20.62</td>
+<td>1518832913</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB45A90&gt;</td>
+<td>lima</td>
+<td>py</td>
+<td>-12.06</td>
+<td>61.06</td>
+<td>91</td>
+<td>32</td>
+<td>0.87</td>
+<td>1518832806</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF34588&gt;</td>
+<td>tura</td>
+<td>ru</td>
+<td>25.52</td>
+<td>65.34</td>
+<td>76</td>
+<td>0</td>
+<td>2.73</td>
+<td>1518832914</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F3F748&gt;</td>
+<td>kamarai</td>
+<td>gr</td>
+<td>38.3</td>
+<td>51.8</td>
+<td>71</td>
+<td>20</td>
+<td>11.41</td>
+<td>1518828600</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EFDC18&gt;</td>
+<td>aasiaat</td>
+<td>gl</td>
+<td>68.71</td>
+<td>10.17</td>
+<td>100</td>
+<td>56</td>
+<td>5.08</td>
+<td>1518832914</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF22400&gt;</td>
+<td>terney</td>
+<td>ru</td>
+<td>45.05</td>
+<td>21.42</td>
+<td>100</td>
+<td>24</td>
+<td>20.89</td>
+<td>1518832915</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE2B6A0&gt;</td>
+<td>lyuban</td>
+<td>ru</td>
+<td>52.8</td>
+<td>24.97</td>
+<td>93</td>
+<td>68</td>
+<td>6.87</td>
+<td>1518832915</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AFD080&gt;</td>
+<td>wanning</td>
+<td>cn</td>
+<td>48.64</td>
+<td>33.8</td>
+<td>82</td>
+<td>75</td>
+<td>4.7</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF226D8&gt;</td>
+<td>teya</td>
+<td>ru</td>
+<td>21.05</td>
+<td>78.8</td>
+<td>57</td>
+<td>5</td>
+<td>11.41</td>
+<td>1518828240</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49CB0278&gt;</td>
+<td>meitingen</td>
+<td>de</td>
+<td>48.55</td>
+<td>32</td>
+<td>97</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AA42198&gt;</td>
+<td>siocon</td>
+<td>ph</td>
+<td>11.03</td>
+<td>81.49</td>
+<td>100</td>
+<td>32</td>
+<td>5.08</td>
+<td>1518832916</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A851128&gt;</td>
+<td>lorengau</td>
+<td>pg</td>
+<td>-2.02</td>
+<td>82.71</td>
+<td>100</td>
+<td>64</td>
+<td>13.29</td>
+<td>1518832916</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9DF98&gt;</td>
+<td>marawi</td>
+<td>sd</td>
+<td>8</td>
+<td>75.24</td>
+<td>91</td>
+<td>48</td>
+<td>0.72</td>
+<td>1518832916</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE43940&gt;</td>
+<td>mirnyy</td>
+<td>ru</td>
+<td>56.57</td>
+<td>20.92</td>
+<td>89</td>
+<td>92</td>
+<td>9.93</td>
+<td>1518832917</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498C3B70&gt;</td>
+<td>camocim</td>
+<td>br</td>
+<td>-2.9</td>
+<td>75.19</td>
+<td>95</td>
+<td>48</td>
+<td>5.23</td>
+<td>1518832917</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3A6160&gt;</td>
+<td>morant bay</td>
+<td>jm</td>
+<td>17.88</td>
+<td>80.6</td>
+<td>78</td>
+<td>20</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C5BA8&gt;</td>
+<td>nelson bay</td>
+<td>au</td>
+<td>-32.72</td>
+<td>80.6</td>
+<td>57</td>
+<td>40</td>
+<td>16.11</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B132B00&gt;</td>
+<td>college</td>
+<td>us</td>
+<td>64.86</td>
+<td>14</td>
+<td>92</td>
+<td>1</td>
+<td>2.77</td>
+<td>1518830880</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6127F0&gt;</td>
+<td>bababe</td>
+<td>mr</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B54B3C8&gt;</td>
+<td>chegutu</td>
+<td>zw</td>
+<td>-18.13</td>
+<td>64.35</td>
+<td>92</td>
+<td>32</td>
+<td>3.62</td>
+<td>1518832918</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7EBC88&gt;</td>
+<td>manutuke</td>
+<td>nz</td>
+<td>-38.68</td>
+<td>77.98</td>
+<td>56</td>
+<td>76</td>
+<td>10.33</td>
+<td>1518832918</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978C710&gt;</td>
+<td>presidencia roque saenz pena</td>
+<td>ar</td>
+<td>-26.79</td>
+<td>82.93</td>
+<td>55</td>
+<td>20</td>
+<td>9.89</td>
+<td>1518832919</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8C4710&gt;</td>
+<td>cabra</td>
+<td>ph</td>
+<td>37.47</td>
+<td>40.93</td>
+<td>93</td>
+<td>76</td>
+<td>1.77</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498A1630&gt;</td>
+<td>araguacu</td>
+<td>br</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A585390&gt;</td>
+<td>aksay</td>
+<td>kz</td>
+<td>47.27</td>
+<td>32.89</td>
+<td>96</td>
+<td>92</td>
+<td>9.82</td>
+<td>1518832919</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4977F978&gt;</td>
+<td>rincon</td>
+<td>an</td>
+<td>32.3</td>
+<td>69.8</td>
+<td>60</td>
+<td>1</td>
+<td>6.76</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0D3D68&gt;</td>
+<td>labuhan</td>
+<td>id</td>
+<td>-2.54</td>
+<td>91.03</td>
+<td>53</td>
+<td>12</td>
+<td>2.62</td>
+<td>1518832920</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49E3E3C8&gt;</td>
+<td>plouzane</td>
+<td>fr</td>
+<td>48.38</td>
+<td>40.1</td>
+<td>93</td>
+<td>0</td>
+<td>3.36</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3E9F98&gt;</td>
+<td>naze</td>
+<td>jp</td>
+<td>5.43</td>
+<td>74.79</td>
+<td>92</td>
+<td>0</td>
+<td>9.89</td>
+<td>1518832921</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B08FF60&gt;</td>
+<td>masuguru</td>
+<td>tz</td>
+<td>-11.38</td>
+<td>72.49</td>
+<td>94</td>
+<td>12</td>
+<td>5.53</td>
+<td>1518832921</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B140DA0&gt;</td>
+<td>mountain home</td>
+<td>us</td>
+<td>43.13</td>
+<td>39.2</td>
+<td>51</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518829080</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF678D0&gt;</td>
+<td>vostok</td>
+<td>ru</td>
+<td>46.45</td>
+<td>7.56</td>
+<td>57</td>
+<td>44</td>
+<td>5.12</td>
+<td>1518832921</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498C76A0&gt;</td>
+<td>campos altos</td>
+<td>br</td>
+<td>-19.7</td>
+<td>62.82</td>
+<td>97</td>
+<td>76</td>
+<td>3.85</td>
+<td>1518832921</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3B5940&gt;</td>
+<td>fukue</td>
+<td>jp</td>
+<td>35.03</td>
+<td>45.36</td>
+<td>65</td>
+<td>20</td>
+<td>25.28</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD6AC18&gt;</td>
+<td>chernyshevskiy</td>
+<td>ru</td>
+<td>63.01</td>
+<td>-10.54</td>
+<td>70</td>
+<td>48</td>
+<td>3.62</td>
+<td>1518832922</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49917F28&gt;</td>
+<td>jacareacanga</td>
+<td>br</td>
+<td>-6.22</td>
+<td>77.85</td>
+<td>87</td>
+<td>20</td>
+<td>2.06</td>
+<td>1518832922</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEF1B38&gt;</td>
+<td>sobolevo</td>
+<td>ru</td>
+<td>54.43</td>
+<td>26.82</td>
+<td>95</td>
+<td>88</td>
+<td>8.32</td>
+<td>1518832922</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49965BA8&gt;</td>
+<td>pitimbu</td>
+<td>br</td>
+<td>-7.47</td>
+<td>78.8</td>
+<td>83</td>
+<td>75</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4988A358&gt;</td>
+<td>puerto quijarro</td>
+<td>bo</td>
+<td>-19</td>
+<td>77.08</td>
+<td>90</td>
+<td>44</td>
+<td>1.99</td>
+<td>1518832923</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497BE400&gt;</td>
+<td>hervey bay</td>
+<td>au</td>
+<td>-25.3</td>
+<td>81.36</td>
+<td>91</td>
+<td>32</td>
+<td>11.56</td>
+<td>1518832923</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499DFD30&gt;</td>
+<td>burns lake</td>
+<td>ca</td>
+<td>54.23</td>
+<td>17.77</td>
+<td>74</td>
+<td>20</td>
+<td>1.54</td>
+<td>1518832923</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A82A048&gt;</td>
+<td>desaguadero</td>
+<td>pe</td>
+<td>-16.56</td>
+<td>44.55</td>
+<td>95</td>
+<td>88</td>
+<td>1.88</td>
+<td>1518832924</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFE7630&gt;</td>
+<td>bereda</td>
+<td>so</td>
+<td>43.27</td>
+<td>42.97</td>
+<td>100</td>
+<td>92</td>
+<td>2.33</td>
+<td>1518832924</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0DA5F8&gt;</td>
+<td>maumere</td>
+<td>id</td>
+<td>-8.63</td>
+<td>77.04</td>
+<td>100</td>
+<td>92</td>
+<td>12.46</td>
+<td>1518832924</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B1AD5C0&gt;</td>
+<td>key west</td>
+<td>us</td>
+<td>47.93</td>
+<td>21.49</td>
+<td>73</td>
+<td>90</td>
+<td>11.41</td>
+<td>1518832560</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A749550&gt;</td>
+<td>opuwo</td>
+<td>na</td>
+<td>-18.06</td>
+<td>54.9</td>
+<td>74</td>
+<td>0</td>
+<td>3.33</td>
+<td>1518832925</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DC97B8&gt;</td>
+<td>gimbi</td>
+<td>et</td>
+<td>8.81</td>
+<td>43.47</td>
+<td>84</td>
+<td>0</td>
+<td>2.33</td>
+<td>1518832925</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE97C88&gt;</td>
+<td>petropavlovsk-kamchatskiy</td>
+<td>ru</td>
+<td>53.05</td>
+<td>24.8</td>
+<td>49</td>
+<td>0</td>
+<td>2.24</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AA9A9B0&gt;</td>
+<td>keti bandar</td>
+<td>pk</td>
+<td>24.14</td>
+<td>72.94</td>
+<td>97</td>
+<td>0</td>
+<td>7.81</td>
+<td>1518832925</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFE7240&gt;</td>
+<td>bandarbeyla</td>
+<td>so</td>
+<td>9.49</td>
+<td>74.7</td>
+<td>100</td>
+<td>92</td>
+<td>15.59</td>
+<td>1518832926</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB07240&gt;</td>
+<td>camacha</td>
+<td>pt</td>
+<td>33.08</td>
+<td>57.2</td>
+<td>82</td>
+<td>20</td>
+<td>5.82</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7432B0&gt;</td>
+<td>beira</td>
+<td>mz</td>
+<td>43.2</td>
+<td>42.8</td>
+<td>100</td>
+<td>40</td>
+<td>3.36</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2F9C18&gt;</td>
+<td>vestmannaeyjar</td>
+<td>is</td>
+<td>63.44</td>
+<td>34.92</td>
+<td>100</td>
+<td>48</td>
+<td>10.45</td>
+<td>1518832927</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AAA7E10&gt;</td>
+<td>ormara</td>
+<td>pk</td>
+<td>25.21</td>
+<td>68.08</td>
+<td>98</td>
+<td>12</td>
+<td>3.62</td>
+<td>1518832927</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A828240&gt;</td>
+<td>chilca</td>
+<td>pe</td>
+<td>-13.22</td>
+<td>57.2</td>
+<td>54</td>
+<td>75</td>
+<td>3.36</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DD8320&gt;</td>
+<td>lapua</td>
+<td>fi</td>
+<td>62.97</td>
+<td>18.59</td>
+<td>92</td>
+<td>90</td>
+<td>2.55</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6214E0&gt;</td>
+<td>grand gaube</td>
+<td>mu</td>
+<td>-20.01</td>
+<td>78.8</td>
+<td>94</td>
+<td>20</td>
+<td>12.62</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4ADE1080&gt;</td>
+<td>kochkurovo</td>
+<td>ru</td>
+<td>54.03</td>
+<td>3.6</td>
+<td>73</td>
+<td>44</td>
+<td>5.53</td>
+<td>1518832928</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D64A90&gt;</td>
+<td>paldiski</td>
+<td>ee</td>
+<td>59.35</td>
+<td>17.6</td>
+<td>92</td>
+<td>75</td>
+<td>4.7</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499A5240&gt;</td>
+<td>tapaua</td>
+<td>br</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7AD630&gt;</td>
+<td>bud</td>
+<td>no</td>
+<td>62.91</td>
+<td>35.71</td>
+<td>100</td>
+<td>64</td>
+<td>9.17</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9AC50&gt;</td>
+<td>lata</td>
+<td>sb</td>
+<td>30.78</td>
+<td>39.6</td>
+<td>80</td>
+<td>24</td>
+<td>2.21</td>
+<td>1518832929</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2DC048&gt;</td>
+<td>baghdad</td>
+<td>iq</td>
+<td>33.3</td>
+<td>59</td>
+<td>93</td>
+<td>90</td>
+<td>8.05</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF22D68&gt;</td>
+<td>tilichiki</td>
+<td>ru</td>
+<td>60.47</td>
+<td>15.43</td>
+<td>88</td>
+<td>68</td>
+<td>4.23</td>
+<td>1518832930</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498B3A90&gt;</td>
+<td>boa vista</td>
+<td>br</td>
+<td>2.82</td>
+<td>78.8</td>
+<td>88</td>
+<td>75</td>
+<td>5.01</td>
+<td>1518832800</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AB3C88&gt;</td>
+<td>dandong</td>
+<td>cn</td>
+<td>40.12</td>
+<td>26.1</td>
+<td>24</td>
+<td>0</td>
+<td>3.78</td>
+<td>1518832931</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49BB9320&gt;</td>
+<td>santa cruz</td>
+<td>cr</td>
+<td>36.97</td>
+<td>61.3</td>
+<td>36</td>
+<td>1</td>
+<td>8.05</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5E6588&gt;</td>
+<td>ambovombe</td>
+<td>mg</td>
+<td>-25.18</td>
+<td>71.01</td>
+<td>96</td>
+<td>20</td>
+<td>3.89</td>
+<td>1518832933</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A582080&gt;</td>
+<td>domoni</td>
+<td>km</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49ABFBE0&gt;</td>
+<td>guilin</td>
+<td>cn</td>
+<td>25.28</td>
+<td>57.2</td>
+<td>82</td>
+<td>75</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49C5FDA0&gt;</td>
+<td>eitorf</td>
+<td>de</td>
+<td>50.77</td>
+<td>30.92</td>
+<td>81</td>
+<td>0</td>
+<td>4.7</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A47A90&gt;</td>
+<td>kisangani</td>
+<td>cd</td>
+<td>0.52</td>
+<td>74.92</td>
+<td>96</td>
+<td>12</td>
+<td>4.12</td>
+<td>1518832935</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B506FD0&gt;</td>
+<td>puerto ayacucho</td>
+<td>ve</td>
+<td>5.66</td>
+<td>86</td>
+<td>58</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7395C0&gt;</td>
+<td>mersing</td>
+<td>my</td>
+<td>2.43</td>
+<td>83.61</td>
+<td>77</td>
+<td>0</td>
+<td>8.37</td>
+<td>1518832935</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4992EE48&gt;</td>
+<td>mancio lima</td>
+<td>br</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4995A198&gt;</td>
+<td>pauini</td>
+<td>br</td>
+<td>-7.71</td>
+<td>73.57</td>
+<td>99</td>
+<td>8</td>
+<td>3.22</td>
+<td>1518832936</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A647A58&gt;</td>
+<td>axtla</td>
+<td>mx</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7BC278&gt;</td>
+<td>kautokeino</td>
+<td>no</td>
+<td>69.01</td>
+<td>6.39</td>
+<td>77</td>
+<td>64</td>
+<td>2.51</td>
+<td>1518832936</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49C71048&gt;</td>
+<td>furstenwalde</td>
+<td>de</td>
+<td>52.37</td>
+<td>30.27</td>
+<td>92</td>
+<td>75</td>
+<td>8.05</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A84BC18&gt;</td>
+<td>vaitape</td>
+<td>pf</td>
+<td>-16.52</td>
+<td>79.74</td>
+<td>100</td>
+<td>76</td>
+<td>7.87</td>
+<td>1518832937</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A6E2C50&gt;</td>
+<td>san quintin</td>
+<td>mx</td>
+<td>17.54</td>
+<td>82.4</td>
+<td>78</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE7E8D0&gt;</td>
+<td>oktyabrskoye</td>
+<td>ru</td>
+<td>56.73</td>
+<td>3.37</td>
+<td>75</td>
+<td>76</td>
+<td>6.13</td>
+<td>1518832937</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F000B8&gt;</td>
+<td>narsaq</td>
+<td>gl</td>
+<td>60.91</td>
+<td>6.8</td>
+<td>46</td>
+<td>44</td>
+<td>4.7</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AA8E9E8&gt;</td>
+<td>dir</td>
+<td>pk</td>
+<td>6.33</td>
+<td>69.66</td>
+<td>46</td>
+<td>0</td>
+<td>8.32</td>
+<td>1518832938</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7FAE10&gt;</td>
+<td>nizwa</td>
+<td>om</td>
+<td>22.93</td>
+<td>51.61</td>
+<td>73</td>
+<td>0</td>
+<td>2.33</td>
+<td>1518832938</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AFC2FD0&gt;</td>
+<td>barentsburg</td>
+<td>sj</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497BEB00&gt;</td>
+<td>kawana waters</td>
+<td>au</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9A748&gt;</td>
+<td>umm lajj</td>
+<td>sa</td>
+<td>25.02</td>
+<td>60.84</td>
+<td>100</td>
+<td>76</td>
+<td>4.07</td>
+<td>1518832939</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A543BE0&gt;</td>
+<td>mequon</td>
+<td>us</td>
+<td>43.22</td>
+<td>20.14</td>
+<td>61</td>
+<td>1</td>
+<td>3.36</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49741B00&gt;</td>
+<td>dawlatabad</td>
+<td>af</td>
+<td>36.41</td>
+<td>39.64</td>
+<td>100</td>
+<td>88</td>
+<td>4.9</td>
+<td>1518832939</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A625B00&gt;</td>
+<td>quatre cocos</td>
+<td>mu</td>
+<td>-20.21</td>
+<td>78.8</td>
+<td>94</td>
+<td>20</td>
+<td>6.42</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B101CC0&gt;</td>
+<td>sribne</td>
+<td>ua</td>
+<td>50.66</td>
+<td>31.14</td>
+<td>97</td>
+<td>92</td>
+<td>3.06</td>
+<td>1518832940</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF48128&gt;</td>
+<td>ust-tsilma</td>
+<td>ru</td>
+<td>65.44</td>
+<td>15.07</td>
+<td>71</td>
+<td>80</td>
+<td>6.87</td>
+<td>1518832940</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3F9240&gt;</td>
+<td>sakaiminato</td>
+<td>jp</td>
+<td>35.55</td>
+<td>39.06</td>
+<td>52</td>
+<td>75</td>
+<td>14.99</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497C17F0&gt;</td>
+<td>mackay</td>
+<td>au</td>
+<td>53.65</td>
+<td>16.7</td>
+<td>61</td>
+<td>75</td>
+<td>14.99</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B502AC8&gt;</td>
+<td>el vigia</td>
+<td>ve</td>
+<td>26.85</td>
+<td>73.4</td>
+<td>64</td>
+<td>75</td>
+<td>9.17</td>
+<td>1518828000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497B5320&gt;</td>
+<td>batemans bay</td>
+<td>au</td>
+<td>-35.71</td>
+<td>77.85</td>
+<td>64</td>
+<td>0</td>
+<td>5.91</td>
+<td>1518832941</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0D3C18&gt;</td>
+<td>kupang</td>
+<td>id</td>
+<td>-10.16</td>
+<td>84.2</td>
+<td>79</td>
+<td>20</td>
+<td>8.05</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2F3160&gt;</td>
+<td>sarakhs</td>
+<td>ir</td>
+<td>36.54</td>
+<td>41</td>
+<td>86</td>
+<td>0</td>
+<td>4.7</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B519470&gt;</td>
+<td>falealupo</td>
+<td>ws</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF9AA58&gt;</td>
+<td>gizo</td>
+<td>sb</td>
+<td>31.8</td>
+<td>55.4</td>
+<td>93</td>
+<td>40</td>
+<td>3.36</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A8690B8&gt;</td>
+<td>antagan</td>
+<td>ph</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49AD2CC0&gt;</td>
+<td>korla</td>
+<td>cn</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EF1F98&gt;</td>
+<td>mana</td>
+<td>gf</td>
+<td>43.52</td>
+<td>31.91</td>
+<td>90</td>
+<td>40</td>
+<td>1.12</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49B74470&gt;</td>
+<td>pizarro</td>
+<td>co</td>
+<td>4.95</td>
+<td>77.22</td>
+<td>100</td>
+<td>80</td>
+<td>4.52</td>
+<td>1518832943</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499D26A0&gt;</td>
+<td>senno</td>
+<td>by</td>
+<td>57.76</td>
+<td>26.6</td>
+<td>92</td>
+<td>92</td>
+<td>4.47</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A667B70&gt;</td>
+<td>constitucion</td>
+<td>mx</td>
+<td>23.99</td>
+<td>75.2</td>
+<td>22</td>
+<td>75</td>
+<td>3.85</td>
+<td>1518828360</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD3BFD0&gt;</td>
+<td>baykit</td>
+<td>ru</td>
+<td>61.68</td>
+<td>-9.46</td>
+<td>65</td>
+<td>48</td>
+<td>5.08</td>
+<td>1518832944</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AEAD7B8&gt;</td>
+<td>preobrazheniye</td>
+<td>ru</td>
+<td>42.9</td>
+<td>11.74</td>
+<td>42</td>
+<td>8</td>
+<td>10.04</td>
+<td>1518832944</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4989A400&gt;</td>
+<td>amapa</td>
+<td>br</td>
+<td>15.09</td>
+<td>75.2</td>
+<td>94</td>
+<td>20</td>
+<td>6.93</td>
+<td>1518832800</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498A7EB8&gt;</td>
+<td>axixa do tocantins</td>
+<td>br</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49915898&gt;</td>
+<td>itarema</td>
+<td>br</td>
+<td>-2.92</td>
+<td>74.83</td>
+<td>99</td>
+<td>92</td>
+<td>4</td>
+<td>1518832945</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC498900F0&gt;</td>
+<td>uyuni</td>
+<td>bo</td>
+<td>-20.46</td>
+<td>44.19</td>
+<td>96</td>
+<td>92</td>
+<td>3.29</td>
+<td>1518832945</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0E9A90&gt;</td>
+<td>simpang</td>
+<td>id</td>
+<td>4.82</td>
+<td>78.8</td>
+<td>88</td>
+<td>75</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49749CF8&gt;</td>
+<td>durres</td>
+<td>al</td>
+<td>41.32</td>
+<td>35.6</td>
+<td>93</td>
+<td>0</td>
+<td>1.12</td>
+<td>1518830400</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE19BE0&gt;</td>
+<td>leshukonskoye</td>
+<td>ru</td>
+<td>64.9</td>
+<td>12.64</td>
+<td>79</td>
+<td>68</td>
+<td>4.56</td>
+<td>1518832946</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A1C898&gt;</td>
+<td>prince rupert</td>
+<td>ca</td>
+<td>54.32</td>
+<td>35.6</td>
+<td>93</td>
+<td>1</td>
+<td>3.36</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497821D0&gt;</td>
+<td>camacupa</td>
+<td>ao</td>
+<td>-12.02</td>
+<td>61.51</td>
+<td>98</td>
+<td>64</td>
+<td>1.61</td>
+<td>1518832947</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AE87470&gt;</td>
+<td>ostrovnoy</td>
+<td>ru</td>
+<td>68.05</td>
+<td>19.03</td>
+<td>90</td>
+<td>68</td>
+<td>10.83</td>
+<td>1518832947</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A632860&gt;</td>
+<td>acapulco</td>
+<td>mx</td>
+<td>16.86</td>
+<td>80.6</td>
+<td>78</td>
+<td>40</td>
+<td>8.05</td>
+<td>1518828240</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7A8668&gt;</td>
+<td>batsfjord</td>
+<td>no</td>
+<td>70.63</td>
+<td>32.76</td>
+<td>100</td>
+<td>80</td>
+<td>6.91</td>
+<td>1518832947</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A757588&gt;</td>
+<td>bauchi</td>
+<td>ng</td>
+<td>10.31</td>
+<td>59.85</td>
+<td>53</td>
+<td>0</td>
+<td>5.08</td>
+<td>1518832948</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD81400&gt;</td>
+<td>dudinka</td>
+<td>ru</td>
+<td>69.41</td>
+<td>2.74</td>
+<td>86</td>
+<td>76</td>
+<td>18.54</td>
+<td>1518832948</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A64A828&gt;</td>
+<td>balancan</td>
+<td>mx</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A849BE0&gt;</td>
+<td>moerai</td>
+<td>pf</td>
+<td>-22.43</td>
+<td>79.2</td>
+<td>100</td>
+<td>80</td>
+<td>19.1</td>
+<td>1518832948</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A2B6630&gt;</td>
+<td>tawang</td>
+<td>in</td>
+<td>27.59</td>
+<td>36.9</td>
+<td>49</td>
+<td>0</td>
+<td>0.98</td>
+<td>1518832949</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A41BD68&gt;</td>
+<td>baringo</td>
+<td>ke</td>
+<td>0.47</td>
+<td>56.52</td>
+<td>89</td>
+<td>0</td>
+<td>2.33</td>
+<td>1518832949</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A97710&gt;</td>
+<td>tocopilla</td>
+<td>cl</td>
+<td>-22.09</td>
+<td>62.91</td>
+<td>100</td>
+<td>0</td>
+<td>3.51</td>
+<td>1518832949</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B54B0B8&gt;</td>
+<td>zambezi</td>
+<td>zm</td>
+<td>-13.55</td>
+<td>61.56</td>
+<td>90</td>
+<td>12</td>
+<td>2.06</td>
+<td>1518832950</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A603AC8&gt;</td>
+<td>taoudenni</td>
+<td>ml</td>
+<td>22.68</td>
+<td>62.82</td>
+<td>67</td>
+<td>92</td>
+<td>12.95</td>
+<td>1518832950</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978CCC0&gt;</td>
+<td>rio gallegos</td>
+<td>ar</td>
+<td>-51.62</td>
+<td>55.4</td>
+<td>43</td>
+<td>0</td>
+<td>8.05</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A5B48D0&gt;</td>
+<td>vievis</td>
+<td>lt</td>
+<td>54.77</td>
+<td>30.38</td>
+<td>100</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518831180</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497A2E10&gt;</td>
+<td>matrei</td>
+<td>at</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DC64A8&gt;</td>
+<td>bonga</td>
+<td>et</td>
+<td>7.26</td>
+<td>58.63</td>
+<td>79</td>
+<td>32</td>
+<td>1.72</td>
+<td>1518832951</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A743630&gt;</td>
+<td>cuamba</td>
+<td>mz</td>
+<td>-14.8</td>
+<td>70.56</td>
+<td>94</td>
+<td>64</td>
+<td>6.64</td>
+<td>1518832951</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A3EC0F0&gt;</td>
+<td>nemuro</td>
+<td>jp</td>
+<td>43.32</td>
+<td>23</td>
+<td>67</td>
+<td>75</td>
+<td>6.93</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49DDBB38&gt;</td>
+<td>rovaniemi</td>
+<td>fi</td>
+<td>66.5</td>
+<td>15.8</td>
+<td>92</td>
+<td>90</td>
+<td>6.93</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A59E128&gt;</td>
+<td>hambantota</td>
+<td>lk</td>
+<td>6.12</td>
+<td>79.2</td>
+<td>100</td>
+<td>12</td>
+<td>14.63</td>
+<td>1518832952</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49902CF8&gt;</td>
+<td>igarape-miri</td>
+<td>br</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499EF940&gt;</td>
+<td>elk point</td>
+<td>ca</td>
+<td>53.9</td>
+<td>14</td>
+<td>72</td>
+<td>20</td>
+<td>9.17</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF67B70&gt;</td>
+<td>voyvozh</td>
+<td>ru</td>
+<td>62.89</td>
+<td>10.89</td>
+<td>79</td>
+<td>76</td>
+<td>7.43</td>
+<td>1518832897</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D52438&gt;</td>
+<td>puerto baquerizo moreno</td>
+<td>ec</td>
+<td>-0.9</td>
+<td>77</td>
+<td>88</td>
+<td>75</td>
+<td>9.17</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AAAB390&gt;</td>
+<td>pattoki</td>
+<td>pk</td>
+<td>31.02</td>
+<td>55.48</td>
+<td>86</td>
+<td>0</td>
+<td>2.84</td>
+<td>1518832953</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49738B00&gt;</td>
+<td>la massana</td>
+<td>ad</td>
+<td>42.54</td>
+<td>31.95</td>
+<td>82</td>
+<td>64</td>
+<td>1.61</td>
+<td>1518832954</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49E26B00&gt;</td>
+<td>mantes-la-jolie</td>
+<td>fr</td>
+<td>48.99</td>
+<td>39.4</td>
+<td>86</td>
+<td>0</td>
+<td>9.17</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B12E198&gt;</td>
+<td>bessemer</td>
+<td>us</td>
+<td>33.4</td>
+<td>54.12</td>
+<td>81</td>
+<td>75</td>
+<td>5.12</td>
+<td>1518831300</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4978E0B8&gt;</td>
+<td>san carlos de bariloche</td>
+<td>ar</td>
+<td>-41.13</td>
+<td>68</td>
+<td>49</td>
+<td>75</td>
+<td>13.87</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4B06F518&gt;</td>
+<td>asau</td>
+<td>tv</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7DDEB8&gt;</td>
+<td>verdalsora</td>
+<td>no</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0EB780&gt;</td>
+<td>sorong</td>
+<td>id</td>
+<td>-0.86</td>
+<td>83.92</td>
+<td>100</td>
+<td>24</td>
+<td>4.23</td>
+<td>1518832955</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0C67F0&gt;</td>
+<td>denpasar</td>
+<td>id</td>
+<td>-8.65</td>
+<td>84.2</td>
+<td>79</td>
+<td>20</td>
+<td>11.41</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49D80668&gt;</td>
+<td>amurrio</td>
+<td>es</td>
+<td>43.05</td>
+<td>52.7</td>
+<td>93</td>
+<td>88</td>
+<td>16.11</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF36F28&gt;</td>
+<td>udachnyy</td>
+<td>ru</td>
+<td>66.42</td>
+<td>-12.25</td>
+<td>75</td>
+<td>56</td>
+<td>3.29</td>
+<td>1518832956</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49A86C88&gt;</td>
+<td>korhogo</td>
+<td>ci</td>
+<td>9.46</td>
+<td>69.57</td>
+<td>61</td>
+<td>0</td>
+<td>3.29</td>
+<td>1518832956</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49ABBEB8&gt;</td>
+<td>fuyu</td>
+<td>cn</td>
+<td>47.79</td>
+<td>8.37</td>
+<td>73</td>
+<td>0</td>
+<td>10.27</td>
+<td>1518832956</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49784438&gt;</td>
+<td>saurimo</td>
+<td>ao</td>
+<td>-9.66</td>
+<td>65.7</td>
+<td>97</td>
+<td>20</td>
+<td>2.55</td>
+<td>1518832957</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A0DCEF0&gt;</td>
+<td>padang</td>
+<td>id</td>
+<td>-0.92</td>
+<td>80.41</td>
+<td>100</td>
+<td>0</td>
+<td>3.06</td>
+<td>1518832957</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A629438&gt;</td>
+<td>souillac</td>
+<td>mu</td>
+<td>45.6</td>
+<td>48.2</td>
+<td>93</td>
+<td>92</td>
+<td>3.36</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AAB8E80&gt;</td>
+<td>zhob</td>
+<td>pk</td>
+<td>31.34</td>
+<td>31.09</td>
+<td>66</td>
+<td>0</td>
+<td>2.55</td>
+<td>1518832957</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A746940&gt;</td>
+<td>gobabis</td>
+<td>na</td>
+<td>-22.45</td>
+<td>66.2</td>
+<td>45</td>
+<td>44</td>
+<td>2.24</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC499C3198&gt;</td>
+<td>mongar</td>
+<td>bt</td>
+<td>27.28</td>
+<td>57.73</td>
+<td>76</td>
+<td>24</td>
+<td>1.32</td>
+<td>1518832958</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A7495F8&gt;</td>
+<td>oranjemund</td>
+<td>na</td>
+<td>-28.55</td>
+<td>62.41</td>
+<td>94</td>
+<td>44</td>
+<td>13.35</td>
+<td>1518832958</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4ADE4C50&gt;</td>
+<td>komsomolskiy</td>
+<td>ru</td>
+<td>67.55</td>
+<td>16.02</td>
+<td>88</td>
+<td>88</td>
+<td>15.7</td>
+<td>1518832959</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AD71A20&gt;</td>
+<td>dalnerechensk</td>
+<td>ru</td>
+<td>45.93</td>
+<td>6.66</td>
+<td>71</td>
+<td>0</td>
+<td>9.37</td>
+<td>1518832959</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49CA1518&gt;</td>
+<td>laupheim</td>
+<td>de</td>
+<td>48.23</td>
+<td>31.39</td>
+<td>97</td>
+<td>90</td>
+<td>8.05</td>
+<td>1518832200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC497CC940&gt;</td>
+<td>ulladulla</td>
+<td>au</td>
+<td>-35.36</td>
+<td>82.4</td>
+<td>45</td>
+<td>40</td>
+<td>11.41</td>
+<td>1518829200</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49EF7E48&gt;</td>
+<td>konongo</td>
+<td>gh</td>
+<td>6.62</td>
+<td>77.85</td>
+<td>73</td>
+<td>0</td>
+<td>10.11</td>
+<td>1518832960</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4A851358&gt;</td>
+<td>mendi</td>
+<td>pg</td>
+<td>9.8</td>
+<td>64.26</td>
+<td>60</td>
+<td>92</td>
+<td>2.62</td>
+<td>1518832960</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49F4C198&gt;</td>
+<td>khania</td>
+<td>gr</td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC49ACA240&gt;</td>
+<td>huilong</td>
+<td>cn</td>
+<td>28.89</td>
+<td>51.88</td>
+<td>87</td>
+<td>80</td>
+<td>3.11</td>
+<td>1518832961</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AB3A6D8&gt;</td>
+<td>antequera</td>
+<td>py</td>
+<td>-24.09</td>
+<td>78.16</td>
+<td>78</td>
+<td>64</td>
+<td>4.12</td>
+<td>1518832961</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF12588&gt;</td>
+<td>svetlogorsk</td>
+<td>ru</td>
+<td>53.14</td>
+<td>3.2</td>
+<td>84</td>
+<td>0</td>
+<td>4.47</td>
+<td>1518831000</td>
+</tr>
+<tr>
+<td>&lt;citipy.citipy.City object at 0x000001BC4AF732E8&gt;</td>
+<td>yar-sale</td>
+<td>ru</td>
+<td>66.83</td>
+<td>1.8</td>
+<td>70</td>
+<td>36</td>
+<td>8.77</td>
+<td>1518832961</td>
+</tr>
+</tbody>
+</table>
+</strong>
+
+	<div class='footer'>
+            <p><center>Copyright Rutgers Data Science Bootcammp 2017</center></p>
+    </div>
+
+</div>
+</body>
+</html>
